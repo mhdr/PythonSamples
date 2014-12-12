@@ -16,6 +16,7 @@ print(output3)
 output4 = "{0} {0} {0}".format(name1)
 print(output4)
 
+# Named Arguments
 output5 = "{nm1} {nm2} {nm3}".format(nm1=name1, nm2=name2, nm3=name3)
 print(output5)
 
@@ -28,3 +29,21 @@ print(output6("Mahmood"))
 
 # Escaping Braces
 print("The empty set is often represented as {{0}} ".format())
+
+# Number Formatting
+pi = 3.14159
+
+# 2 decimal places
+print("Number : {0:.2f}".format(pi))
+
+# 2 decimal places with sign
+print("Number : {0:+.2f}".format(pi))
+
+# 2 decimal places with sign
+print("Number : {:+.2f}".format(-1))
+
+# No decimal places
+print("Number : {0:.0f}".format(pi))
+
+# Number format with comma separator
+print("Number : {:,}".format(1000000))
