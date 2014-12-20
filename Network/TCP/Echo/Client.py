@@ -11,4 +11,4 @@ clientSocket.sendall(str.encode("Hello World","utf-8"))
 data=clientSocket.recv(1024)
 clientSocket.close()
 
-print("Recieved",bytes.decode(data,"utf-8"))
+print("Echo :",bytes.decode(data,"utf-8"))
