@@ -3,8 +3,6 @@ from Person import Person
 
 __author__ = 'mahmood'
 
-
-
 person1=Person("Mahmood","Ramzani",29)
 person1.print_person()
 
@@ -16,3 +14,7 @@ employee1.print_salary()
 
 employee2=Employee(person2,20000)
 employee2.print_salary()
+
+person3= Person.initialize("Mahmood","Ramzani",29,"MHDR")
+person3.print_person()
+
