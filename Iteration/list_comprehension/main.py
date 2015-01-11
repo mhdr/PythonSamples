@@ -1,16 +1,9 @@
 __author__ = 'mahmood'
 
-from Person import Person
+from People import People
 
-list=[]
-
-person1=Person.initialize("Mahmood","Ramzani",29)
-person2=Person.initialize("Javad","Najafi",30)
-person3=Person.initialize("Mahmood","Rohani",29)
-
-list.append(person1)
-list.append(person2)
-list.append(person3)
+people=People()
+list=People.get()
 
 result=[x for x in list if x.first_name=="Mahmood"]
 
