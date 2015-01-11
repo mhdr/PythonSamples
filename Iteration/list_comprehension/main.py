@@ -3,7 +3,7 @@ __author__ = 'mahmood'
 from People import People
 
 people=People()
-list=People.get()
+list=people.get()
 
 result=[x for x in list if x.first_name=="Mahmood"]
 

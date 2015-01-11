@@ -10,7 +10,7 @@ class Person:
         self.last_name=""
         self.age=0
 
-    def initialize(first_name:str,last_name:str,age:int)->Person:
+    def initialize(first_name:str,last_name:str,age:int)->'Person':
         new_person=Person()
 
         new_person.first_name=first_name

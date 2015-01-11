@@ -4,7 +4,7 @@ from Person import Person
 
 class People:
 
-    def get(self)->list[Person]:
+    def get(self)->'list[Person]':
         people_list = []
 
 
@@ -18,7 +18,7 @@ class People:
 
         return people_list
 
-    def search(self, predicate)->list[Person]:
+    def search(self, predicate)->'list[Person]':
         people_list = self.get()
 
         result=[]

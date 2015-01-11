@@ -4,9 +4,8 @@ from Person import Person
 
 class People:
 
-    def get(self)->list[Person]:
+    def get(self)->'list[Person]':
         people_list = []
-
 
         new_person1 = Person.initialize("Mahmood", "Ramzani", 29)
         new_person2 = Person.initialize("Javad", "Najafi", 30)
