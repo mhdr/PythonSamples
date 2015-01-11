@@ -11,6 +11,13 @@ class Person:
         self.age=0
 
     def initialize(first_name:str,last_name:str,age:int)->'Person':
+        """ initialize the class using parameters and return a person object
+        :param first_name:
+        :param last_name:
+        :param age:
+        :return:
+        :rtype:Person
+        """
         new_person=Person()
 
         new_person.first_name=first_name

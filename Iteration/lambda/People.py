@@ -5,6 +5,10 @@ from Person import Person
 class People:
 
     def get(self)->'list[Person]':
+        """ get all people
+        :return:list of all people
+        :rtype:list[Person]
+        """
         people_list = []
 
 
@@ -18,7 +22,12 @@ class People:
 
         return people_list
 
-    def search(self, predicate)->'list[Person]':
+    def search(self, predicate:'function')->'list[Person]':
+        """ filter list of people using predicate
+        :param predicate: lambda expression
+        :return:filtered list of people with lambda expression
+        :rtype:list[Person]
+        """
         people_list = self.get()
 
         result=[]
