@@ -1,0 +1,1319 @@
+From: <Saved by Mozilla 5.0 (X11)>
+Subject: Python Files I/O
+Date: Sat, 13 Dec 2014 17:06:34 +0330
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_E317ADEB.A1804A0A"
+X-MAF-Information: Produced By MAF V3.0.3
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index.html
+
+<!DOCTYPE html><html lang=3D"en"><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+
+<meta charset=3D"utf-8">
+<title>Python Files I/O</title>
+<link rel=3D"shortcut icon" href=3D"file:///home/mahmood/.mozilla/firefox/b=
+x40q2ki.default/ScrapBook/data/20141213170133/favicon.ico" type=3D"image/x-=
+icon">
+<meta name=3D"description" content=3D"Python Files I/O - Learning Python in=
+ simple and easy steps : A beginner's tutorial containing complete knowledg=
+e of Python Syntax Object Oriented Language, Methods, Tuples, Tools/Utiliti=
+es, Exceptions Handling, Sockets, GUI, Extentions, XML Programming">
+<meta name=3D"Keywords" content=3D"Python, Tutorials, Learning, Beginners,=
+ Basics, Object Oriented Language, Methods, Overriding, Networking, Multith=
+reading,Methods, Tuples, Tools/Utilities, Exceptions Handling, Sockets, GUI=
+, Extentions, XML, Programming">
+
+<meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1,u=
+ser-scalable=3Dyes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"urn:snapshot-1AB46A85:fi=
+le:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/2014121=
+3170133/index.css" media=3D"all">
+</head>
+<body>
+
+
+<div class=3D"wrapper">
+<!-- leftcol -->
+<div style=3D"width: 575px;" id=3D"middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class=3D"content">
+<h1>Python Files I/O</h1>
+<div class=3D"topgooglead">
+
+
+<ins data-adsbygoogle-status=3D"done" class=3D"adsbygoogle top_ad_slot" sty=
+le=3D"display: inline-block; width: 468px; height: 60px;" data-ad-client=3D=
+"ca-pub-7133395778201029" data-ad-slot=3D"2813390526"><ins id=3D"aswift_1_e=
+xpand" style=3D"display: inline-table; border: medium none; height: 60px;=
+ margin: 0px; padding: 0px; position: relative; visibility: visible; width:=
+ 468px; background-color: transparent;"><ins id=3D"aswift_1_anchor" style=
+=3D"display: block; border: medium none; height: 60px; margin: 0px; padding=
+: 0px; position: relative; visibility: visible; width: 468px; background-co=
+lor: transparent;"><iframe src=3D"urn:snapshot-0D0AB340:file:///home/mahmoo=
+d/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index_1.h=
+tml" marginwidth=3D"0" marginheight=3D"0" vspace=3D"0" hspace=3D"0" allowtr=
+ansparency=3D"true" scrolling=3D"no" allowfullscreen=3D"true" id=3D"aswift_=
+1" name=3D"aswift_1" style=3D"left: 0px; position: absolute; top: 0px;" wid=
+th=3D"468" frameborder=3D"0" height=3D"60"></iframe></ins></ins></ins>
+
+</div>
+
+<div class=3D"pre-btn">
+
+</div>
+<div class=3D"nxt-btn">
+
+</div>
+<div class=3D"clearer"></div>
+<hr>
+<p>This chapter will cover all the basic I/O functions available in Python.=
+ For more functions, please refer to standard Python documentation.</p>
+<h2>Printing to the Screen:</h2>
+<p>The simplest way to produce output is using the <i>print</i> statement=
+ where you can pass zero or more expressions separated by commas. This func=
+tion converts the expressions you pass into a string and writes the result=
+ to standard output as follows:</p>
+<pre class=3D"prettyprint tryit prettyprinted"><span class=3D"com">#!/usr/b=
+in/python</span><span class=3D"pln">
+
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Python is really a great language,"</span><span class=3D"pun">=
+,</span><span class=3D"pln"> </span><span class=3D"str">"isn't it?"</span><=
+span class=3D"pun">;</span></pre>
+<p>This would produce the following result on your standard screen:</p>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"typ">Python</span><=
+span class=3D"pln"> </span><span class=3D"kwd">is</span><span class=3D"pln"=
+> really a great language</span><span class=3D"pun">,</span><span class=3D"=
+pln"> isn</span><span class=3D"str">'t it?</span></pre>
+<h2>Reading Keyboard Input:</h2>
+<p>Python provides two built-in functions to read a line of text from stand=
+ard input, which by default comes from the keyboard. These functions are:</=
+p>
+<ul class=3D"list">
+<li><p>raw_input</p></li>
+<li><p>input</p></li>
+</ul>
+<h2>The <i>raw_input</i> Function:</h2>
+<p>The <i>raw_input([prompt])</i> function reads one line from standard inp=
+ut and returns it as a string (removing the trailing newline).</p>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"com">#!/usr/bin/pyt=
+hon</span><span class=3D"pln">
+
+str </span><span class=3D"pun">=3D</span><span class=3D"pln"> raw_input</sp=
+an><span class=3D"pun">(</span><span class=3D"str">"Enter your input: "</sp=
+an><span class=3D"pun">);</span><span class=3D"pln">
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Received input is : "</span><span class=3D"pun">,</span><span=
+ class=3D"pln"> str</span></pre>
+<p>This would prompt you to enter any string and it would display same stri=
+ng on the screen. When I typed "Hello Python!", its output is like this:</p>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"typ">Ent=
+er</span><span class=3D"pln"> your input</span><span class=3D"pun">:</span>=
+<span class=3D"pln"> </span><span class=3D"typ">Hello</span><span class=3D"=
+pln"> </span><span class=3D"typ">Python</span><span class=3D"pln">
+</span><span class=3D"typ">Received</span><span class=3D"pln"> input </span=
+><span class=3D"kwd">is</span><span class=3D"pln"> </span><span class=3D"pu=
+n">:</span><span class=3D"pln">  </span><span class=3D"typ">Hello</span><sp=
+an class=3D"pln"> </span><span class=3D"typ">Python</span></pre>
+<h2>The <i>input</i> Function:</h2>
+<p>The <i>input([prompt])</i> function is equivalent to raw_input, except=
+ that it assumes the input is a valid Python expression and returns the eva=
+luated result to you.</p>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"com">#!/usr/bin/pyt=
+hon</span><span class=3D"pln">
+
+str </span><span class=3D"pun">=3D</span><span class=3D"pln"> input</span><=
+span class=3D"pun">(</span><span class=3D"str">"Enter your input: "</span><=
+span class=3D"pun">);</span><span class=3D"pln">
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Received input is : "</span><span class=3D"pun">,</span><span=
+ class=3D"pln"> str</span></pre>
+<p>This would produce the following result against the entered input:</p>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"typ">Ent=
+er</span><span class=3D"pln"> your input</span><span class=3D"pun">:</span>=
+<span class=3D"pln"> </span><span class=3D"pun">[</span><span class=3D"pln"=
+>x</span><span class=3D"pun">*</span><span class=3D"lit">5</span><span clas=
+s=3D"pln"> </span><span class=3D"kwd">for</span><span class=3D"pln"> x </sp=
+an><span class=3D"kwd">in</span><span class=3D"pln"> range</span><span clas=
+s=3D"pun">(</span><span class=3D"lit">2</span><span class=3D"pun">,</span><=
+span class=3D"lit">10</span><span class=3D"pun">,</span><span class=3D"lit"=
+>2</span><span class=3D"pun">)]</span><span class=3D"pln">
+</span><span class=3D"typ">Recieved</span><span class=3D"pln"> input </span=
+><span class=3D"kwd">is</span><span class=3D"pln"> </span><span class=3D"pu=
+n">:</span><span class=3D"pln">  </span><span class=3D"pun">[</span><span=
+ class=3D"lit">10</span><span class=3D"pun">,</span><span class=3D"pln"> </=
+span><span class=3D"lit">20</span><span class=3D"pun">,</span><span class=
+=3D"pln"> </span><span class=3D"lit">30</span><span class=3D"pun">,</span><=
+span class=3D"pln"> </span><span class=3D"lit">40</span><span class=3D"pun"=
+>]</span></pre>
+<h2>Opening and Closing Files:</h2>
+<p>Until now, you have been reading and writing to the standard input and=
+ output. Now, we will see how to play with actual data files.</p>
+<p>Python provides basic functions and methods necessary to manipulate file=
+s by default. You can do your most of the file manipulation using a <b>file=
+</b> object.</p>
+<h2>The <i>open</i> Function:</h2>
+<p>Before you can read or write a file, you have to open it using Python's=
+ built-in <i>open()</i> function. This function creates a <b>file</b> objec=
+t, which would be utilized to call other support methods associated with it=
+.</p>
+<h3>Syntax:</h3>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"pln">fil=
+e </span><span class=3D"kwd">object</span><span class=3D"pln"> </span><span=
+ class=3D"pun">=3D</span><span class=3D"pln"> open</span><span class=3D"pun=
+">(</span><span class=3D"pln">file_name </span><span class=3D"pun">[,</span=
+><span class=3D"pln"> access_mode</span><span class=3D"pun">][,</span><span=
+ class=3D"pln"> buffering</span><span class=3D"pun">])</span></pre>
+<p>Here is paramters' detail:</p>
+<ul class=3D"list">
+<li><p><b>file_name:</b> The file_name argument is a string value that cont=
+ains the name of the file that you want to access.</p></li>
+<li><p><b>access_mode:</b> The access_mode determines the mode in which the=
+ file has to be opened, i.e., read, write, append, etc. A complete list of=
+ possible values is given below in the table. This is optional parameter an=
+d the default file access mode is read (r).</p></li>
+<li><p><b>buffering:</b> If the buffering value is set to 0, no buffering=
+ will take place. If the buffering value is 1, line buffering will be perfo=
+rmed while accessing a file. If you specify the buffering value as an integ=
+er greater than 1, then buffering action will be performed with the indicat=
+ed buffer size. If negative, the buffer size is the system default(default=
+ behavior).</p></li>
+</ul>
+<p>Here is a list of the different modes of opening a file:</p>
+<table class=3D"src">
+<tbody><tr><th style=3D"width: 10%;">Modes</th><th>Description</th></tr>
+<tr><td>r</td><td>Opens a file for reading only. The file pointer is placed=
+ at the beginning of the file. This is the default mode.</td></tr>
+<tr><td>rb</td><td>Opens a file for reading only in binary format. The file=
+ pointer is placed at the beginning of the file. This is the default mode.<=
+/td></tr>
+<tr><td>r+</td><td>Opens a file for both reading and writing. The file poin=
+ter will be at the beginning of the file.</td></tr>
+<tr><td>rb+</td><td>Opens a file for both reading and writing in binary for=
+mat. The file pointer will be at the beginning of the file.</td></tr>
+<tr><td>w</td><td>Opens a file for writing only. Overwrites the file if the=
+ file exists. If the file does not exist, creates a new file for writing.</=
+td></tr>
+<tr><td>wb</td><td>Opens a file for writing only in binary format. Overwrit=
+es the file if the file exists. If the file does not exist, creates a new=
+ file for writing.</td></tr>
+<tr><td>w+</td><td>Opens a file for both writing and reading. Overwrites th=
+e existing file if the file exists. If the file does not exist, creates a=
+ new file for
+reading and writing.</td></tr>=20
+<tr><td>wb+</td><td>Opens a file for both writing and reading in binary for=
+mat. Overwrites the existing file if the file exists. If the file does not=
+ exist, creates a new file for reading and writing.</td></tr>
+<tr><td>a</td><td>Opens a file for appending. The file pointer is at the en=
+d of the file if the file exists. That is, the file is in the append mode.=
+ If the file does not exist, it creates a new file for writing.</td></tr>=20
+<tr><td>ab</td><td>Opens a file for appending in binary format. The file po=
+inter is at the end of the file if the file exists. That is, the file is in=
+ the append mode. If the file does not exist, it creates a new file for wri=
+ting.</td></tr>=20
+<tr><td>a+</td><td>Opens a file for both appending and reading. The file po=
+inter is at the end of the file if the file exists. The file opens in the=
+ append mode. If the file does not exist, it creates a new file for reading=
+ and writing.</td></tr>=20
+<tr><td>ab+</td><td>Opens a file for both appending and reading in binary=
+ format. The file pointer is at the end of the file if the file exists. The=
+ file opens in the append mode. If the file does not exist, it creates a ne=
+w file for reading and writing.</td></tr>
+</tbody></table>
+<h2>The <i>file</i> object attributes:</h2>
+<p>Once a file is opened and you have one <i>file</i> object, you can get=
+ various information related to that file.</p>
+<p>Here is a list of all attributes related to file object:</p>
+<table class=3D"src">
+<tbody><tr><th>Attribute</th><th>Description</th></tr>
+<tr><td>file.closed</td><td>Returns true if file is closed, false otherwise=
+.</td></tr>
+<tr><td>file.mode</td><td>Returns access mode with which file was opened.</=
+td></tr>
+<tr><td>file.name</td><td>Returns name of the file.</td></tr>
+<tr><td>file.softspace</td><td>Returns false if space explicitly required=
+ with print, true otherwise.</td></tr>
+</tbody></table>
+<h3>Example:</h3>
+<pre style=3D"" class=3D"prettyprint tryit prettyprinted"><span class=3D"co=
+m">#!/usr/bin/python</span><span class=3D"pln">
+
+</span><span class=3D"com"># Open a file</span><span class=3D"pln">
+fo </span><span class=3D"pun">=3D</span><span class=3D"pln"> open</span><sp=
+an class=3D"pun">(</span><span class=3D"str">"foo.txt"</span><span class=3D=
+"pun">,</span><span class=3D"pln"> </span><span class=3D"str">"wb"</span><s=
+pan class=3D"pun">)</span><span class=3D"pln">
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Name of the file: "</span><span class=3D"pun">,</span><span cl=
+ass=3D"pln"> fo</span><span class=3D"pun">.</span><span class=3D"pln">name
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Closed or not : "</span><span class=3D"pun">,</span><span clas=
+s=3D"pln"> fo</span><span class=3D"pun">.</span><span class=3D"pln">closed
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Opening mode : "</span><span class=3D"pun">,</span><span class=
+=3D"pln"> fo</span><span class=3D"pun">.</span><span class=3D"pln">mode
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Softspace flag : "</span><span class=3D"pun">,</span><span cla=
+ss=3D"pln"> fo</span><span class=3D"pun">.</span><span class=3D"pln">softsp=
+ace</span></pre>
+<p>This would produce the following result:</p>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"typ">Nam=
+e</span><span class=3D"pln"> of the file</span><span class=3D"pun">:</span>=
+<span class=3D"pln">  foo</span><span class=3D"pun">.</span><span class=3D"=
+pln">txt
+</span><span class=3D"typ">Closed</span><span class=3D"pln"> </span><span=
+ class=3D"kwd">or</span><span class=3D"pln"> </span><span class=3D"kwd">not=
+</span><span class=3D"pln"> </span><span class=3D"pun">:</span><span class=
+=3D"pln">  </span><span class=3D"kwd">False</span><span class=3D"pln">
+</span><span class=3D"typ">Opening</span><span class=3D"pln"> mode </span><=
+span class=3D"pun">:</span><span class=3D"pln">  wb
+</span><span class=3D"typ">Softspace</span><span class=3D"pln"> flag </span=
+><span class=3D"pun">:</span><span class=3D"pln">  </span><span class=3D"li=
+t">0</span></pre>
+<h2>The <i>close()</i> Method:</h2>
+<p>The close() method of a <i>file</i> object flushes any unwritten informa=
+tion and closes the file object, after which no more writing can be done.</=
+p>
+<p>Python automatically closes a file when the reference object of a file=
+ is reassigned to another file. It is a good practice to use the close() me=
+thod to close a file.</p>
+<h3>Syntax:</h3>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"pln">fil=
+eObject</span><span class=3D"pun">.</span><span class=3D"pln">close</span><=
+span class=3D"pun">();</span></pre>
+<h3>Example:</h3>
+<pre class=3D"prettyprint tryit prettyprinted"><span class=3D"com">#!/usr/b=
+in/python</span><span class=3D"pln">
+
+</span><span class=3D"com"># Open a file</span><span class=3D"pln">
+fo </span><span class=3D"pun">=3D</span><span class=3D"pln"> open</span><sp=
+an class=3D"pun">(</span><span class=3D"str">"foo.txt"</span><span class=3D=
+"pun">,</span><span class=3D"pln"> </span><span class=3D"str">"wb"</span><s=
+pan class=3D"pun">)</span><span class=3D"pln">
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Name of the file: "</span><span class=3D"pun">,</span><span cl=
+ass=3D"pln"> fo</span><span class=3D"pun">.</span><span class=3D"pln">name
+
+</span><span class=3D"com"># Close opend file</span><span class=3D"pln">
+fo</span><span class=3D"pun">.</span><span class=3D"pln">close</span><span=
+ class=3D"pun">()</span></pre>
+<p>This would produce the following result:</p>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"typ">Name</span><sp=
+an class=3D"pln"> of the file</span><span class=3D"pun">:</span><span class=
+=3D"pln">  foo</span><span class=3D"pun">.</span><span class=3D"pln">txt</s=
+pan></pre>
+<h2>Reading and Writing Files:</h2>
+<p>The <i>file</i> object provides a set of access methods to make our live=
+s easier. We would see how to use <i>read()</i> and <i>write()</i> methods=
+ to read and write files.</p>
+<h2>The <i>write()</i> Method:</h2>
+<p>The <i>write()</i> method writes any string to an open file. It is impor=
+tant to note that Python strings can have binary data and not just text.</p>
+<p>The write() method does not add a newline character ('\n') to the end of=
+ the string:</p>
+<h3>Syntax:</h3>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"pln">fileObject</sp=
+an><span class=3D"pun">.</span><span class=3D"pln">write</span><span class=
+=3D"pun">(</span><span class=3D"kwd">string</span><span class=3D"pun">);</s=
+pan></pre>
+<p>Here, passed parameter is the content to be written into the opened file=
+.</p>
+<h3>Example:</h3>
+<pre class=3D"prettyprint tryit prettyprinted"><span class=3D"com">#!/usr/b=
+in/python</span><span class=3D"pln">
+
+</span><span class=3D"com"># Open a file</span><span class=3D"pln">
+fo </span><span class=3D"pun">=3D</span><span class=3D"pln"> open</span><sp=
+an class=3D"pun">(</span><span class=3D"str">"foo.txt"</span><span class=3D=
+"pun">,</span><span class=3D"pln"> </span><span class=3D"str">"wb"</span><s=
+pan class=3D"pun">)</span><span class=3D"pln">
+fo</span><span class=3D"pun">.</span><span class=3D"pln">write</span><span=
+ class=3D"pun">(</span><span class=3D"pln"> </span><span class=3D"str">"Pyt=
+hon is a great language.\nYeah its great!!\n"</span><span class=3D"pun">);<=
+/span><span class=3D"pln">
+
+</span><span class=3D"com"># Close opend file</span><span class=3D"pln">
+fo</span><span class=3D"pun">.</span><span class=3D"pln">close</span><span=
+ class=3D"pun">()</span></pre>
+<p>The above method would create <i>foo.txt</i> file and would write given=
+ content in that file and finally it would close that file. If you would op=
+en this file, it would have following content.</p>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"typ">Python</span><=
+span class=3D"pln"> </span><span class=3D"kwd">is</span><span class=3D"pln"=
+> a great language</span><span class=3D"pun">.</span><span class=3D"pln">
+</span><span class=3D"typ">Yeah</span><span class=3D"pln"> its great</span>=
+<span class=3D"pun">!!</span></pre>
+<h2>The <i>read()</i> Method:</h2>
+<p>The <i>read()</i> method reads a string from an open file. It is importa=
+nt to note that Python strings can have binary data and not just text.</p>
+<h3>Syntax:</h3>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"pln">fileObject</sp=
+an><span class=3D"pun">.</span><span class=3D"pln">read</span><span class=
+=3D"pun">([</span><span class=3D"pln">count</span><span class=3D"pun">]);</=
+span></pre>
+<p>Here, passed parameter is the number of bytes to be read from the opened=
+ file. This method starts reading from the beginning of the file and if <i>=
+count</i> is missing, then it tries to read as much as possible, maybe unti=
+l the end of file.</p>
+<h3>Example:</h3>
+<p> Let's take a file <i>foo.txt</i>, which we have created above.</p>
+<pre style=3D"" class=3D"prettyprint tryit prettyprinted"><span class=3D"co=
+m">#!/usr/bin/python</span><span class=3D"pln">
+
+</span><span class=3D"com"># Open a file</span><span class=3D"pln">
+fo </span><span class=3D"pun">=3D</span><span class=3D"pln"> open</span><sp=
+an class=3D"pun">(</span><span class=3D"str">"foo.txt"</span><span class=3D=
+"pun">,</span><span class=3D"pln"> </span><span class=3D"str">"r+"</span><s=
+pan class=3D"pun">)</span><span class=3D"pln">
+str </span><span class=3D"pun">=3D</span><span class=3D"pln"> fo</span><spa=
+n class=3D"pun">.</span><span class=3D"pln">read</span><span class=3D"pun">=
+(</span><span class=3D"lit">10</span><span class=3D"pun">);</span><span cla=
+ss=3D"pln">
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Read String is : "</span><span class=3D"pun">,</span><span cla=
+ss=3D"pln"> str
+</span><span class=3D"com"># Close opend file</span><span class=3D"pln">
+fo</span><span class=3D"pun">.</span><span class=3D"pln">close</span><span=
+ class=3D"pun">()</span></pre>
+<p>This would produce the following result:</p>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"typ">Rea=
+d</span><span class=3D"pln"> </span><span class=3D"typ">String</span><span=
+ class=3D"pln"> </span><span class=3D"kwd">is</span><span class=3D"pln"> </=
+span><span class=3D"pun">:</span><span class=3D"pln">  </span><span class=
+=3D"typ">Python</span><span class=3D"pln"> </span><span class=3D"kwd">is</s=
+pan></pre>
+<h2>File Positions:</h2>
+<p>The <i>tell()</i> method tells you the current position within the file;=
+ in other words, the next read or write will occur at that many bytes from=
+ the beginning of the file.</p>
+<p>The <i>seek(offset[, from])</i> method changes the current file position=
+. The <i>offset</i> argument indicates the number of bytes to be moved. The=
+ <i>from</i>
+argument specifies the reference position from where the bytes are to be mo=
+ved.</p>
+<p>If <i>from</i> is set to 0, it means use the beginning of the file as th=
+e reference position and 1 means use the current position as the reference=
+ position and if it is set to 2 then the end of the file would be taken as=
+ the reference position.</p>
+<h3>Example:</h3>
+<p> Let's take a file <i>foo.txt</i>, which we have created above.</p>
+<pre style=3D"" class=3D"prettyprint tryit prettyprinted"><span class=3D"co=
+m">#!/usr/bin/python</span><span class=3D"pln">
+
+</span><span class=3D"com"># Open a file</span><span class=3D"pln">
+fo </span><span class=3D"pun">=3D</span><span class=3D"pln"> open</span><sp=
+an class=3D"pun">(</span><span class=3D"str">"foo.txt"</span><span class=3D=
+"pun">,</span><span class=3D"pln"> </span><span class=3D"str">"r+"</span><s=
+pan class=3D"pun">)</span><span class=3D"pln">
+str </span><span class=3D"pun">=3D</span><span class=3D"pln"> fo</span><spa=
+n class=3D"pun">.</span><span class=3D"pln">read</span><span class=3D"pun">=
+(</span><span class=3D"lit">10</span><span class=3D"pun">);</span><span cla=
+ss=3D"pln">
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Read String is : "</span><span class=3D"pun">,</span><span cla=
+ss=3D"pln"> str
+
+</span><span class=3D"com"># Check current position</span><span class=3D"pl=
+n">
+position </span><span class=3D"pun">=3D</span><span class=3D"pln"> fo</span=
+><span class=3D"pun">.</span><span class=3D"pln">tell</span><span class=3D"=
+pun">();</span><span class=3D"pln">
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Current file position : "</span><span class=3D"pun">,</span><s=
+pan class=3D"pln"> position
+
+</span><span class=3D"com"># Reposition pointer at the beginning once again=
+</span><span class=3D"pln">
+position </span><span class=3D"pun">=3D</span><span class=3D"pln"> fo</span=
+><span class=3D"pun">.</span><span class=3D"pln">seek</span><span class=3D"=
+pun">(</span><span class=3D"lit">0</span><span class=3D"pun">,</span><span=
+ class=3D"pln"> </span><span class=3D"lit">0</span><span class=3D"pun">);</=
+span><span class=3D"pln">
+str </span><span class=3D"pun">=3D</span><span class=3D"pln"> fo</span><spa=
+n class=3D"pun">.</span><span class=3D"pln">read</span><span class=3D"pun">=
+(</span><span class=3D"lit">10</span><span class=3D"pun">);</span><span cla=
+ss=3D"pln">
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Again read String is : "</span><span class=3D"pun">,</span><sp=
+an class=3D"pln"> str
+</span><span class=3D"com"># Close opend file</span><span class=3D"pln">
+fo</span><span class=3D"pun">.</span><span class=3D"pln">close</span><span=
+ class=3D"pun">()</span></pre>
+<p>This would produce the following result:</p>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"typ">Rea=
+d</span><span class=3D"pln"> </span><span class=3D"typ">String</span><span=
+ class=3D"pln"> </span><span class=3D"kwd">is</span><span class=3D"pln"> </=
+span><span class=3D"pun">:</span><span class=3D"pln">  </span><span class=
+=3D"typ">Python</span><span class=3D"pln"> </span><span class=3D"kwd">is</s=
+pan><span class=3D"pln">
+</span><span class=3D"typ">Current</span><span class=3D"pln"> file position=
+ </span><span class=3D"pun">:</span><span class=3D"pln">  </span><span clas=
+s=3D"lit">10</span><span class=3D"pln">
+</span><span class=3D"typ">Again</span><span class=3D"pln"> read </span><sp=
+an class=3D"typ">String</span><span class=3D"pln"> </span><span class=3D"kw=
+d">is</span><span class=3D"pln"> </span><span class=3D"pun">:</span><span=
+ class=3D"pln">  </span><span class=3D"typ">Python</span><span class=3D"pln=
+"> </span><span class=3D"kwd">is</span></pre>
+<h2>Renaming and Deleting Files:</h2>
+<p>Python <b>os</b> module provides methods that help you perform file-proc=
+essing operations, such as renaming and deleting files.</p>
+<p>To use this module you need to import it first and then you can call any=
+ related functions.</p>
+<h2>The rename() Method:</h2>
+<p>The <i>rename()</i> method takes two arguments, the current filename and=
+ the new filename.</p>
+<h3>Syntax:</h3>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"pln">os<=
+/span><span class=3D"pun">.</span><span class=3D"pln">rename</span><span cl=
+ass=3D"pun">(</span><span class=3D"pln">current_file_name</span><span class=
+=3D"pun">,</span><span class=3D"pln"> new_file_name</span><span class=3D"pu=
+n">)</span></pre>
+<h3>Example:</h3>
+<p>Following is the example to rename an existing file <i>test1.txt</i>:</p>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"com">#!/=
+usr/bin/python</span><span class=3D"pln">
+</span><span class=3D"kwd">import</span><span class=3D"pln"> os
+
+</span><span class=3D"com"># Rename a file from test1.txt to test2.txt</spa=
+n><span class=3D"pln">
+os</span><span class=3D"pun">.</span><span class=3D"pln">rename</span><span=
+ class=3D"pun">(</span><span class=3D"pln"> </span><span class=3D"str">"tes=
+t1.txt"</span><span class=3D"pun">,</span><span class=3D"pln"> </span><span=
+ class=3D"str">"test2.txt"</span><span class=3D"pln"> </span><span class=3D=
+"pun">)</span><span class=3D"pln">
+</span></pre>
+<h2>The <i>remove()</i> Method:</h2>
+<p>You can use the <i>remove()</i> method to delete files by supplying the=
+ name of the file to be deleted as the argument.</p>
+<h3>Syntax:</h3>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"pln">os<=
+/span><span class=3D"pun">.</span><span class=3D"pln">remove</span><span cl=
+ass=3D"pun">(</span><span class=3D"pln">file_name</span><span class=3D"pun"=
+>)</span></pre>
+<h3>Example:</h3>
+<p>Following is the example to delete an existing file <i>test2.txt</i>:</p>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"com">#!/=
+usr/bin/python</span><span class=3D"pln">
+</span><span class=3D"kwd">import</span><span class=3D"pln"> os
+
+</span><span class=3D"com"># Delete file test2.txt</span><span class=3D"pln=
+">
+os</span><span class=3D"pun">.</span><span class=3D"pln">remove</span><span=
+ class=3D"pun">(</span><span class=3D"str">"text2.txt"</span><span class=3D=
+"pun">)</span></pre>
+<h2>Directories in Python:</h2>
+<p>All files are contained within various directories, and Python has no pr=
+oblem handling these too. The <b>os</b> module has several methods that hel=
+p you create, remove and change directories.</p>
+<h2>The <i>mkdir()</i> Method:</h2>
+<p>You can use the <i>mkdir()</i> method of the <b>os</b> module to create=
+ directories in the current directory. You need to supply an argument to th=
+is method which contains the name of the directory to be created.</p>
+<h3>Syntax:</h3>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"pln">os<=
+/span><span class=3D"pun">.</span><span class=3D"pln">mkdir</span><span cla=
+ss=3D"pun">(</span><span class=3D"str">"newdir"</span><span class=3D"pun">)=
+</span></pre>
+<h3>Example:</h3>
+<p>Following is the example to create a directory <i>test</i> in the curren=
+t directory:</p>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"com">#!/=
+usr/bin/python</span><span class=3D"pln">
+</span><span class=3D"kwd">import</span><span class=3D"pln"> os
+
+</span><span class=3D"com"># Create a directory "test"</span><span class=3D=
+"pln">
+os</span><span class=3D"pun">.</span><span class=3D"pln">mkdir</span><span=
+ class=3D"pun">(</span><span class=3D"str">"test"</span><span class=3D"pun"=
+>)</span></pre>
+<h2>The <i>chdir()</i> Method:</h2>
+<p>You can use the <i>chdir()</i> method to change the current directory.=
+ The chdir() method takes an argument, which is the name of the
+directory that you want to make the current directory.</p>
+<h3>Syntax:</h3>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"pln">os<=
+/span><span class=3D"pun">.</span><span class=3D"pln">chdir</span><span cla=
+ss=3D"pun">(</span><span class=3D"str">"newdir"</span><span class=3D"pun">)=
+</span></pre>
+<h3>Example:</h3>
+<p>Following is the example to go into "/home/newdir" directory:</p>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"com">#!/=
+usr/bin/python</span><span class=3D"pln">
+</span><span class=3D"kwd">import</span><span class=3D"pln"> os
+
+</span><span class=3D"com"># Changing a directory to "/home/newdir"</span><=
+span class=3D"pln">
+os</span><span class=3D"pun">.</span><span class=3D"pln">chdir</span><span=
+ class=3D"pun">(</span><span class=3D"str">"/home/newdir"</span><span class=
+=3D"pun">)</span></pre>
+<h2>The <i>getcwd()</i> Method:</h2>
+<p>The <i>getcwd()</i> method displays the current working directory.</p>
+<h3>Syntax:</h3>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"pln">os</span><span=
+ class=3D"pun">.</span><span class=3D"pln">getcwd</span><span class=3D"pun"=
+>()</span></pre>
+<h3>Example:</h3>
+<p>Following is the example to give current directory:</p>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"com">#!/usr/bin/pyt=
+hon</span><span class=3D"pln">
+</span><span class=3D"kwd">import</span><span class=3D"pln"> os
+
+</span><span class=3D"com"># This would give location of the current direct=
+ory</span><span class=3D"pln">
+os</span><span class=3D"pun">.</span><span class=3D"pln">getcwd</span><span=
+ class=3D"pun">()</span></pre>
+<h2>The <i>rmdir()</i> Method:</h2>
+<p>The <i>rmdir()</i> method deletes the directory, which is passed as an=
+ argument in the method.</p>
+<p>Before removing a directory, all the contents in it should be removed.</=
+p>
+<h3>Syntax:</h3>
+<pre style=3D"" class=3D"prettyprint prettyprinted"><span class=3D"pln">os<=
+/span><span class=3D"pun">.</span><span class=3D"pln">rmdir</span><span cla=
+ss=3D"pun">(</span><span class=3D"str">'dirname'</span><span class=3D"pun">=
+)</span></pre>
+<h3>Example:</h3>
+<p>Following is the example to remove "/tmp/test" directory. It is required=
+ to give fully qualified name of the directory, otherwise it would search=
+ for that directory in the current directory.</p>
+<pre class=3D"prettyprint prettyprinted"><span class=3D"com">#!/usr/bin/pyt=
+hon</span><span class=3D"pln">
+</span><span class=3D"kwd">import</span><span class=3D"pln"> os
+
+</span><span class=3D"com"># This would  remove "/tmp/test"  directory.</sp=
+an><span class=3D"pln">
+os</span><span class=3D"pun">.</span><span class=3D"pln">rmdir</span><span=
+ class=3D"pun">(</span><span class=3D"pln"> </span><span class=3D"str">"/tm=
+p/test"</span><span class=3D"pln">  </span><span class=3D"pun">)</span></pr=
+e>
+<h2>File &amp; Directory Related Methods:</h2>
+<p>There are three important sources, which provide a wide range of utility=
+ methods to handle and manipulate files &amp; directories on Windows and Un=
+ix operating systems. They are as follows:</p>
+<ul class=3D"list">
+<li><p><a href=3D"http://www.tutorialspoint.com/python/file_methods.htm">Fi=
+le Object Methods</a>: The <i>file</i> object provides functions to manipul=
+ate files.</p></li>
+<li><p><a href=3D"http://www.tutorialspoint.com/python/os_file_methods.htm"=
+>OS Object Methods</a>: This provides methods to process files as well as=
+ directories. </p></li>
+<!--
+<li><p><a href=3D"/python/os_path_methods.htm">OS.Path Object Methods.</a>:=
+ This provides important functions to get information about a file or direc=
+tory. </p></li>
+-->
+</ul>
+
+<div class=3D"pre-btn">
+
+</div>
+<div class=3D"print-btn">
+
+</div>
+<div class=3D"pdf-btn">
+
+</div>
+<div class=3D"nxt-btn">
+
+</div>
+<div class=3D"clearer"></div>
+
+</div>
+<!-- PRINTING ENDS HERE -->
+
+</div><!-- middlecol -->
+<div id=3D"rightcol">
+<!-- AddThis Button BEGIN -->
+
+<!-- AddThis Button END -->
+
+
+<div class=3D"rightgooglead">
+
+
+<ins id=3D"aswift_0_expand" style=3D"display: inline-table; border: medium=
+ none; height: 600px; margin: 0px; padding: 0px; position: relative; visibi=
+lity: visible; width: 160px; background-color: transparent;"><ins id=3D"asw=
+ift_0_anchor" style=3D"display: block; border: medium none; height: 600px;=
+ margin: 0px; padding: 0px; position: relative; visibility: visible; width:=
+ 160px; background-color: transparent;"><iframe src=3D"urn:snapshot-E9768D4=
+3:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/201=
+41213170133/index_12.html" marginwidth=3D"0" marginheight=3D"0" vspace=3D"0=
+" hspace=3D"0" allowtransparency=3D"true" scrolling=3D"no" allowfullscreen=
+=3D"true" id=3D"aswift_0" name=3D"aswift_0" style=3D"left: 0px; position:=
+ absolute; top: 0px;" width=3D"160" frameborder=3D"0" height=3D"600"></ifra=
+me></ins></ins>
+</div>
+</div><!-- rightcol -->
+<div style=3D"clear: both;"></div>
+</div><div id=3D"_atssh" style=3D"visibility: hidden; height: 1px; width:=
+ 1px; position: absolute; z-index: 100000;"><iframe src=3D"urn:snapshot-BFE=
+DB88C:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data=
+/20141213170133/index_15.html" style=3D"height: 1px; width: 1px; position:=
+ absolute; z-index: 100000; border: 0px none; left: 0px; top: 0px;" title=
+=3D"AddThis utility frame" id=3D"_atssh547"></iframe></div><!-- wrapper -->
+
+
+
+<div style=3D"display: none;" id=3D"cboxOverlay"></div><div style=3D"displa=
+y: none;" tabindex=3D"-1" role=3D"dialog" class=3D"" id=3D"colorbox"><div=
+ id=3D"cboxWrapper"><div><div style=3D"float: left;" id=3D"cboxTopLeft"></d=
+iv><div style=3D"float: left;" id=3D"cboxTopCenter"></div><div style=3D"flo=
+at: left;" id=3D"cboxTopRight"></div></div><div style=3D"clear: left;"><div=
+ style=3D"float: left;" id=3D"cboxMiddleLeft"></div><div style=3D"float: le=
+ft;" id=3D"cboxContent"><div style=3D"float: left;" id=3D"cboxTitle"></div>=
+<div style=3D"float: left;" id=3D"cboxCurrent"></div><button id=3D"cboxPrev=
+ious" type=3D"button"></button><button id=3D"cboxNext" type=3D"button"></bu=
+tton><button id=3D"cboxSlideshow"></button><div style=3D"float: left;" id=
+=3D"cboxLoadingOverlay"></div><div style=3D"float: left;" id=3D"cboxLoading=
+Graphic"></div></div><div style=3D"float: left;" id=3D"cboxMiddleRight"></d=
+iv></div><div style=3D"clear: left;"><div style=3D"float: left;" id=3D"cbox=
+BottomLeft"></div><div style=3D"float: left;" id=3D"cboxBottomCenter"></div=
+><div style=3D"float: left;" id=3D"cboxBottomRight"></div></div></div><div=
+ style=3D"position: absolute; width: 9999px; visibility: hidden; display:=
+ none; max-width: none;"></div></div><div id=3D"source" style=3D"display:=
+ none;"></div><div id=3D"supportsource" style=3D"display: none;"></div><div=
+ id=3D"utilsource" style=3D"display: none;"></div><div id=3D"extrasource"=
+ style=3D"display: none;"></div><div id=3D"inputs" style=3D"display: none;"=
+></div><div id=3D"filename" style=3D"display: none;"></div><iframe tabindex=
+=3D"-1" style=3D"width: 1px; height: 1px; position: absolute; top: -100px;"=
+ src=3D"urn:snapshot-9B2D982B:file:///home/mahmood/.mozilla/firefox/bx40q2k=
+i.default/ScrapBook/data/20141213170133/index_16.html" id=3D"oauth2relay835=
+159263" name=3D"oauth2relay835159263"></iframe>
+
+</body></html>
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: image/vnd.microsoft.icon
+Content-Transfer-Encoding: base64
+Content-Location: file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/favicon.ico
+
+iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAABEFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1
+NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hh
+cC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9t
+bS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3Vy
+Y2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRj
+PSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wUmlnaHRzOk1hcmtlZD0iRmFs
+c2UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjlFRjRDRkEyMkFCMTFFNDhGQTc4RkYyNTY3
+NTVDM0QiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjlFRjRDRjkyMkFCMTFFNDhGQTc4RkYy
+NTY3NTVDM0QiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTMyBXaW5kb3dzIj4g
+PHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUNGRkMyMDNGNjE1
+MTFFMzg5OEE5Mjg0MjY2Q0I2RDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUNGRkMyMDRG
+NjE1MTFFMzg5OEE5Mjg0MjY2Q0I2RDEiLz4gPGRjOmNyZWF0b3I+IDxyZGY6U2VxPiA8cmRmOmxp
+PmFrdTwvcmRmOmxpPiA8L3JkZjpTZXE+IDwvZGM6Y3JlYXRvcj4gPGRjOnRpdGxlPiA8cmRmOkFs
+dD4gPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij50dXRvcmlhbHNwb2ludDwvcmRmOmxpPiA8
+L3JkZjpBbHQ+IDwvZGM6dGl0bGU+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4
+bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+kNLvDQAACMNJREFUeNqkV3tsU+cV/zlx4jzsOE5i
+J3Ye5IUTCHmUPFoIoQQIKUOs47GtlaZprSZUxlTEVLWboK06aX8UtmqszTYxbRMaG4xnA4iyAIEG
+moS8X+ThOA875B3biZ34ldjfzv2iRmS8EvZJV9bne+85v++c3znnd0WMsUEAMrzAslqtsFltiI6J
+xgsuG9j/sVbExjEywixm8wvb8OEoXmClp62B0+HAmtVpiI2JgdlkfuEIWJeLOisjk4no5PaZGb5P
+Skhg/r5iNjExsVxT1mUDyH5pLQ+7aXzemXt2lv/GaKJZgCSAmZYHYnkAUlNSuHOzycT392vr2L2q
+aubxePk+LjaWiX18CYRpyQB8lpqslzKzoOvS4eHAABRhYahrbIKvry+Cg4JQW18Pj9cLg9GIhIR4
+qNVRGBsbW5LdJQHIy8lFU0szxsfHqeRiUFPfAB+RCP7+/hyERCJBTW09f1an1yM8LByayChMm62L
+7NCJH7Mt4nl4Rh/ITM9AS1srzBMmKMLDUF1TC010NJQREbDabBgeGoKIwAjGnU4ncnOy4SvyQcnR
+36PS1QVVpAqrY5PRNdCDo/s+IuCLzmx7ZgSy165FKzk39vdz57UNjYiMikIjhfznBw7g1o0biCAg
+whIi4efvh9aWB3Qs4Mcf7INb7IF12obw8AgcfOOd/3W+EJYnkjB//XpOuJGRYb43dhuZacxCpKti
+0ZFqfi9CHsq+rrjLBgaHWEvrAzZsHGFjA2Ps7U8PMfHOWPb3stPs3T8eZqevXWDMswwSCmH/prIS
+oyMjiKRc3muowW8uHceEwwKvYw6Do8P8uYmpSc6LGJUa0WGRGDIN425HFQwTA3jz1V3YmL4en73z
+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
+wygymtjsAAAAAElFTkSuQmCC
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-1AB46A85:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index.css
+
+/* Effective stylesheet produced by snapshot save */
+.top_ad_slot { width: 320px; height: 50px; }
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol,=
+ p, pre, table, ul, dd, dt, li, tbody, td, tfoot, th, thead, tr, button, de=
+l, ins, map, object, a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em=
+, i, img, kbd, q, samp, small, span, strong, sub, sup, tt, var, legend, fie=
+ldset { margin: 0px; padding: 0px; }
+html, body { margin: 0px; padding: 0px; }
+body { width: 100%; background: none repeat scroll 0% 0% rgb(238, 238, 238)=
+; overflow-x: hidden; font-size: 75%; font-family: Helvetica,Arial,sans-ser=
+if; margin-left: auto; margin-right: auto; }
+h1 { font-weight: normal; padding-bottom: 0.2em; margin-bottom: 1em; text-s=
+hadow: 2px 2px 3px rgb(204, 204, 204); text-align: center; }
+h2 { font-size: 1.6em; margin-bottom: 0.5em; line-height: 1.5em; font-weigh=
+t: normal; padding: 0.5em 0px 0.1em; text-shadow: 1px 1px 2px rgb(204, 204,=
+ 204); }
+h3 { font-size: 1.2em; line-height: 1.5em; text-transform: uppercase; font-=
+weight: bold; text-shadow: 1px 1px 2px rgb(204, 204, 204); }
+pre + h3 { padding-top: 10px ! important; }
+h3 + p { padding-top: 0px ! important; margin-top: 0px ! important; }
+a { color: rgb(0, 0, 0); text-decoration: none; }
+a:link { color: rgb(144, 11, 9); background-color: transparent; }
+a:visited { color: rgb(144, 11, 9); background-color: transparent; }
+a:active { color: rgb(255, 0, 0); background-color: transparent; }
+a:hover { color: rgb(255, 0, 0); background-color: transparent; }
+a:hover { background: none repeat scroll 0% 0% transparent; color: red; tex=
+t-decoration: underline; }
+h1, h2, h3 { margin: 0.2em 0.2em 0.2em 0px; padding: 0px; font-weight: norm=
+al; }
+p { margin: 0.8em 0px 1em; padding: 0px; text-align: justify; }
+table.src { border: 1px solid rgb(214, 214, 214); width: 100%; border-colla=
+pse: collapse; vertical-align: top; margin-top: 8px; margin-bottom: 8px; ba=
+ckground-color: rgb(247, 247, 247); }
+table.src td { border-collapse: collapse; border: 1px solid rgb(214, 214,=
+ 214); padding: 5px; }
+table.src th { border-collapse: collapse; border: 1px solid rgb(214, 214,=
+ 214); background-color: rgb(238, 238, 238); padding: 5px; text-align: left=
+; }
+.wrapper { width: 960px; padding: 0px; margin: 0px auto; overflow: hidden; }
+#middlecol { float: left; width: 575px; border: 1px solid rgb(214, 214, 214=
+); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#rightcol { float: left; width: 170px; padding: 2px; margin-top: 0px; text-=
+align: center; background: none repeat scroll 0% 0% transparent; border: 0p=
+x solid rgb(214, 214, 214); position: relative; height: 100%; }
+.clearer { clear: both; }
+#leftcol, #middlecol, #rightcol { min-height: 600px; padding: 0px; }
+ul.list { padding-left: 15px; list-style: outside none none; }
+ul.list li { background: url("file:///home/mahmood/.mozilla/firefox/bx40q2k=
+i.default/ScrapBook/data/20141213170133/icon-bullet.png") no-repeat scroll=
+ 0px 0px transparent; padding: 0px 0px 0px 19px; }
+#rightcol { background: none repeat scroll 0% 0% transparent; }
+#middlecol div.content { padding: 0px 7px 7px; }
+div.rightgooglead { text-align: center; }
+div.topgooglead { text-align: center; border-top: 1px solid rgb(214, 214,=
+ 214); padding-top: 5px; }
+.pre-btn { float: left; background: none repeat scroll 0% 0% transparent;=
+ text-align: center; padding-left: 10px; padding-bottom: 5px; position: rel=
+ative; }
+.nxt-btn { float: right; background: none repeat scroll 0% 0% transparent;=
+ text-align: right; margin-right: 20px; padding-bottom: 5px; position: rela=
+tive; left: 0px; }
+.print-btn { float: left; background: none repeat scroll 0% 0% transparent;=
+ text-align: center; position: relative; padding-left: 0px; left: 45px; top=
+: 0px; }
+.pdf-btn { float: left; background: none repeat scroll 0% 0% transparent;=
+ text-align: center; position: relative; padding-left: 0px; left: 85px; top=
+: 0px; }
+hr { border: 0px none; color: rgb(214, 214, 214); background-color: rgb(214=
+, 214, 214); height: 1px; width: 100%; text-align: left; }
+pre.prettyprint.tryit { background: url("file:///home/mahmood/.mozilla/fire=
+fox/bx40q2ki.default/ScrapBook/data/20141213170133/link.png") no-repeat scr=
+oll right top rgb(238, 238, 238) ! important; }
+@media only screen and (max-width: 769px) {
+  .print-btn, .pdf-btn { display: none; }
+  .nxt-btn, .pre-btn { font-size: 15px; padding-top: 4px; }
+  table { width: 99.5% ! important; max-width: 99.5% ! important; }
+  #middlecol .content h3 { font-size: 13px ! important; }
+  #middlecol .content h2 { font-size: 16px ! important; }
+  #middlecol .content h1 { font-size: 20px ! important; }
+}
+.pln { color: rgb(0, 0, 0); }
+@media screen {
+  .str { color: rgb(0, 136, 0); }
+  .kwd { color: rgb(0, 0, 136); }
+  .com { color: rgb(136, 0, 0); }
+  .typ { color: rgb(127, 0, 85); }
+  .lit { color: rgb(0, 102, 102); }
+  .pun, .opn, .clo { color: rgb(102, 102, 0); }
+}
+pre.prettyprint { border: 1px solid rgb(214, 214, 214); background-color:=
+ rgb(238, 238, 238); width: 98%; border-radius: 0px; padding: 5px; margin:=
+ 0px 0px 10px; font-size: 12px; overflow: auto; }
+#colorbox, #cboxOverlay, #cboxWrapper { position: absolute; top: 0px; left:=
+ 0px; z-index: 9999; overflow: hidden; }
+#cboxOverlay { position: fixed; width: 100%; height: 100%; }
+#cboxMiddleLeft, #cboxBottomLeft { clear: left; }
+#cboxContent { position: relative; }
+#cboxTitle { margin: 0px; }
+#cboxLoadingOverlay, #cboxLoadingGraphic { position: absolute; top: 0px; le=
+ft: 0px; width: 100%; height: 100%; }
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow { cursor: pointer; }
+#colorbox, #cboxContent, #cboxLoadedContent { box-sizing: content-box; }
+#cboxOverlay { background: none repeat scroll 0% 0% rgb(170, 170, 170); }
+#colorbox { outline: 0px none; }
+#cboxContent { margin-top: 20px; background: none repeat scroll 0% 0% rgb(1=
+70, 170, 170); }
+#cboxTitle { position: absolute; top: -20px; left: 0px; color: rgb(204, 204=
+, 204); }
+#cboxCurrent { position: absolute; top: -20px; right: 0px; color: rgb(204,=
+ 204, 204); }
+#cboxLoadingGraphic { background: url("urn:not-loaded:file:///home/mahmood/=
+.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/loading.gif=
+") no-repeat scroll center center transparent; }
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose { border: 0px none; pa=
+dding: 0px; margin: 0px; overflow: visible; width: auto; background: none=
+ repeat scroll 0% 0% transparent; }
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:a=
+ctive { outline: 0px none; }
+#cboxSlideshow { position: absolute; top: -20px; right: 90px; color: rgb(25=
+5, 255, 255); }
+#cboxPrevious { position: absolute; top: 50%; left: 5px; margin-top: -32px;=
+ background: url("urn:not-loaded:file:///home/mahmood/.mozilla/firefox/bx40=
+q2ki.default/ScrapBook/data/20141213170133/controls.png") no-repeat scroll=
+ left top transparent; width: 28px; height: 65px; text-indent: -9999px; }
+#cboxPrevious:hover { background-position: left bottom; }
+#cboxNext { position: absolute; top: 50%; right: 5px; margin-top: -32px; ba=
+ckground: url("urn:not-loaded:file:///home/mahmood/.mozilla/firefox/bx40q2k=
+i.default/ScrapBook/data/20141213170133/controls.png") no-repeat scroll rig=
+ht top transparent; width: 28px; height: 65px; text-indent: -9999px; }
+#cboxNext:hover { background-position: right bottom; }
+#middlecol { min-height: 1250px; padding: 0px; }
+:first-child + html #at_email textarea { height: 42px ! important; }
+* html #at16psf input, :first-child + html #at16psf input { padding: 0px;=
+ }
+:first-child + html #at_email #at16eatdr { top: 115px ! important; width:=
+ 272px ! important; }
+#_atssh { width: 1px ! important; height: 1px ! important; border: 0px none=
+ ! important; }
+
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/icon-bullet.png
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTM5jWRgMAAACd
+SURBVDiN7ZExCsMwDEV/SQ2ZsvlC7gmKd98w5ATtYC8+Qu6Q3ZalpVNC6hja0jV/ETw+DwkBZy41
+CCE8RMSICJgZ62Tmp3PuVvevNSilGKUUuq5D3/cbn+fZtDY4CHLOUEphWZaNaa2RUmqecBAQEYZh
+gLV2Y9575Jy/E6zFcRzfNiCi3wRa6yb/KEgpTTHG+/4DIgIRmZqGM//nBTWJUwGD/XHQAAAAAElF
+TkSuQmCC
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/link.png
+
+iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1
+NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOklu
+c3RhbmNlSUQ9InhtcC5paWQ6MTYwQTI1OUMzQ0QxMTFFNDk2RDlBQTZBMjQwNzJFODMiIHhtcE1N
+OkRvY3VtZW50SUQ9InhtcC5kaWQ6MTYwQTI1OUQzQ0QxMTFFNDk2RDlBQTZBMjQwNzJFODMiPiA8
+eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxNjBBMjU5QTNDRDEx
+MUU0OTZEOUFBNkEyNDA3MkU4MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxNjBBMjU5QjND
+RDExMUU0OTZEOUFBNkEyNDA3MkU4MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8
+L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhkrclMAAAMfSURBVHja7FhNSCpRFP6UkiQs
+2roIayFBVJQg1KZVtAkK1GgVgYuWRYuW/bhoJRLto6CFqyBXQogRgUkhRhEtiozIoD8CI2hRzJtz
+4l5G8r3n6Fg+eAeuc+bcud7v3nvOd86MqbGxMQvAhp+Xlxr1x47qEJuZEFUJmBczqkiqCkyNkX/W
+1taGxcVFPD4+8n02m8XS0lLR401qNOX0RlN7ezs3RVGk7eHhAU9PT9jb25O2+/t7OJ1OXdGkS6am
+pjA7O4t0Ov25GpOJ2/n5Ofd5PB5sbm5yX1NTU2WPaWFhAd3d3bi6uirYPzY2JvXa2trKgqGt//j4
+KNgXj8fR09ODgYEB2Gw2rK+vVxYM+YnFYvli393dRVdXF4aGhnB4eMi25ubm7w1th8OBs7MzBuL1
+enF0dKTHaY0N7YaGBtTV1cHv9yMWiyEcDiOXy2FycrLyYKxWK/uNkOPjY7S0tMj76+trfuZbdubt
+7Y1DWzgnhfX7+zvMZjPq6+v5qPQQXVmkZ7fbsbq6ypNrSU+EcjQaRTAYLClRlsTA/7P2P521C0lr
+aytGRkbw/PyMtbW14sHMzMxwNi4kp6enCIVCusEQkLm5OWQyGX1gCAhlXSOFdoSAXFxc8P3y8jL6
++/uxsrLyBVweGApZ2gESWg1JIBDgazKZzNv6y8vLosDQhNpJKYESSRYsLyi01aZom1oiKEJIJ5v6
+h4oKQFEZl+2kU9ve3pbjhG18fFzapqen5XPU7u7u8sZr5s0V7cBiRaKMoCw9MTHBtr6+PgwODrJO
+RxKJROQ42gExThyVYaG9v7/PWVldMesko6OjcLvdspT4nfh8PlmWbmxscJFWFpjb21upHxwc8NXl
+cqGzs5P1nZ2dnyG9+fl5vL6+oqOjg5PkyclJ3hF9OwMnEgmpp1Kposf19vYyrxkKRvgN7RBxx1+z
+4cvn2zTVyUQfRBN/TAfEIYJfBJ8IDtLyjbbOpSKrEPdsbW1J8iMhx6cCjAiWgGnHlF1CUHSQzxD4
+UtKFYSXE8PAwAyHeKROIPKaSd4Veaent8ebmxpDvM6Zq+nL1S4ABAEpygbZAi3BUAAAAAElFTkSu
+QmCC
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-0D0AB340:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index_1.html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xml:lang=3D"en" xmlns=
+=3D"http://www.w3.org/1999/xhtml" lang=3D"en"><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<title>AddThis utility frame</title></head>
+<body style=3D"background-color: transparent;">
+
+
+</body></html>
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-E9768D43:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index_12.html
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+</head>
+<body><iframe id=3D"google_ads_frame3" name=3D"google_ads_frame3" src=3D"ur=
+n:snapshot-00890DB2:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/=
+ScrapBook/data/20141213170133/index_13.html" marginwidth=3D"0" marginheight=
+=3D"0" vspace=3D"0" hspace=3D"0" allowtransparency=3D"true" scrolling=3D"no=
+" allowfullscreen=3D"true" width=3D"336" frameborder=3D"0" height=3D"280"><=
+/iframe>
+
+</body></html>
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-00890DB2:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index_13.html
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"urn:snapshot-28B0F920:fi=
+le:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/2014121=
+3170133/index_13.css" media=3D"all">
+</head>
+<body leftmargin=3D"0" topmargin=3D"0" style=3D"background: none repeat scr=
+oll 0% 0% transparent;" marginheight=3D"0" marginwidth=3D"0"><div style=3D"=
+right: 0px; top: 20px; display: none;" class=3D"ddmc right bottom"><div cla=
+ss=3D"tip"></div><div id=3D"ddc" class=3D"dropdown-content"><table><tbody><=
+tr><td><div id=3D"pubmute" style=3D"border-bottom: 1px solid rgb(153, 153,=
+ 153);" class=3D"dropdown-item"><span>Ad covers the page</span></div></td><=
+/tr><tr><td><div id=3D"admute" class=3D"dropdown-item"><span>Stop seeing th=
+is ad</span></div></td></tr></tbody></table></div></div><div style=3D"displ=
+ay: none;" id=3D"cbtf" class=3D"feedback_container"><div class=3D"feedback_=
+page"><div id=3D"mtadmas"><div class=3D"feedback_title">It's gone. <a id=3D=
+"mtadmaundo" href=3D"javascript:void(0);">Undo</a></div><div class=3D"surve=
+y_description">What was wrong with this ad?</div><div class=3D"survey"><lab=
+el><div class=3D"survey_option"><input name=3D"surveyOptions" value=3D"7"=
+ type=3D"radio"><span class=3D"survey_option_text">Irrelevant</span></div><=
+/label><label><div class=3D"survey_option"><input name=3D"surveyOptions" va=
+lue=3D"8" type=3D"radio"><span class=3D"survey_option_text">Inappropriate</=
+span></div></label><label><div class=3D"survey_option"><input name=3D"surve=
+yOptions" value=3D"2" type=3D"radio"><span class=3D"survey_option_text">Rep=
+etitive</span></div></label></div></div><div id=3D"mtadmac" style=3D"displa=
+y: none;"><div class=3D"feedback_title">Thanks for the feedback! <a id=3D"m=
+tadmback" href=3D"javascript:void(0);">Back</a></div><div class=3D"feedback=
+_description">We=E2=80=99ll review this ad to improve your experience in th=
+e future.</div><div class=3D"feedback_description">Help us show you better=
+ ads by updating your <a href=3D"http://www.google.com/settings/ads?hl=3Den=
+" target=3D"_top">ads settings</a>.</div><div id=3D"ad-feedback-closing" st=
+yle=3D"display: none;" class=3D"feedback_closing"></div></div><div id=3D"mt=
+admpc" style=3D"display: none;"><div class=3D"feedback_title">Thanks for th=
+e feedback! <a id=3D"mtadmpundo" href=3D"javascript:void(0);">Undo</a></div=
+><div class=3D"feedback_description">We=E2=80=99ll use your feedback to rev=
+iew ads on this site.</div><div class=3D"feedback_description">Help us show=
+ you better ads by updating your <a href=3D"http://www.google.com/settings/=
+ads?hl=3Den" target=3D"_top">ads settings</a>.</div><div id=3D"pub-feedback=
+-closing" style=3D"display: none;" class=3D"feedback_closing"></div></div><=
+span id=3D"feedback-closing-template" style=3D"display: none;">Closing ad:=
+ %1$d</span><div class=3D"feedback_logo"><img src=3D"file:///home/mahmood/.=
+mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/google-logo.=
+png"></div></div></div><iframe src=3D"urn:snapshot-B326A245:file:///home/ma=
+hmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index=
+_14.html" style=3D"height: 0px; width: 0px; position: absolute;" frameborde=
+r=3D"0"></iframe>
+
+</body></html>
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/google-logo.png
+
+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
+AABJRU5ErkJggg==
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-28B0F920:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index_13.css
+
+/* Effective stylesheet produced by snapshot save */
+a:link { color: rgb(0, 0, 0); }
+a:visited { color: rgb(0, 0, 0); }
+a:hover { color: rgb(0, 0, 0); }
+a:active { color: rgb(0, 0, 0); }
+div, ul, li { margin: 0px; padding: 0px; }
+.feedback_container { width: 100%; height: 100%; position: absolute; top:=
+ 0px; left: 0px; display: none; z-index: 9020; background-color: white; }
+.feedback_page { font-family: "Arial"; font-size: 13px; margin: 16px; }
+.feedback_title { font-weight: bold; color: rgb(0, 0, 0); }
+.feedback_page a { font-weight: normal; color: rgb(51, 102, 204); }
+.feedback_description { color: rgb(102, 102, 102); line-height: 16px; margi=
+n: 12px 0px; }
+.feedback_closing { color: rgb(3, 103, 255); line-height: 16px; margin: 12p=
+x 0px; }
+.feedback_logo { position: absolute; right: 0px; bottom: 0px; margin: 0px=
+ 12px 9px 0px; }
+.feedback_logo img { height: 15px; }
+.survey_description { color: rgb(102, 102, 102); line-height: 17px; margin:=
+ 12px 0px 10px; }
+.survey { color: rgb(102, 102, 102); line-height: 20px; }
+.survey_option input { margin: 0px; vertical-align: middle; }
+.survey_option_text { margin: 0px 0px 0px 5px; line-height: 17px; vertical-=
+align: bottom; }
+.survey_option:hover { background-color: lightblue; cursor: default; }
+.ddmc { background: none repeat scroll 0% 0% rgb(204, 204, 204); color: rgb=
+(0, 0, 0); padding: 0px; position: absolute; z-index: 9020; max-width: 100%=
+; box-shadow: 2px 2px 3px rgb(170, 170, 170); }
+.ddmc.right { margin-left: 0px; }
+.ddmc .tip { border-left: 4px solid transparent; border-right: 4px solid tr=
+ansparent; height: 0px; position: absolute; width: 0px; font-size: 0px; lin=
+e-height: 0; }
+.ddmc.bottom .tip { border-bottom: 4px solid rgb(204, 204, 204); top: -4px;=
+ }
+.ddmc.right .tip { right: 3px; }
+.ddmc .dropdown-content { display: block; }
+.dropdown-content { display: none; border-collapse: collapse; }
+.dropdown-item { font: 12px Arial,sans-serif; cursor: pointer; padding: 3px=
+ 7px; vertical-align: middle; }
+#ddc > table { border-collapse: collapse; border-spacing: 0px; }
+#ddc > table > tbody > tr > td { padding: 0px; }
+
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-B326A245:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index_14.html
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+</head>
+<body>
+
+</body></html>
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-BFEDB88C:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index_15.html
+
+<!DOCTYPE html><html dir=3D"ltr" lang=3D"en"><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"urn:snapshot-6A31EE3A:fi=
+le:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/2014121=
+3170133/index_15.css" media=3D"all">
+</head>
+<body class=3D"kv8eNc "><div id=3D"root"><div id=3D"plusone" dir=3D"ltr" cl=
+ass=3D"Jg"><span id=3D"widget_bounds"><div class=3D"dIa"><div aria-pressed=
+=3D"false" aria-label=3D"Click here to publicly +1 this." style=3D"height:=
+ 15px; width: 24px;" class=3D"FP HP Gib Ina mEc" id=3D"button" title=3D""=
+ role=3D"button" tabindex=3D"0"><div class=3D"Ul"><div style=3D"margin: 0px=
+;" class=3D"s7"><svg version=3D"1.1" xmlns=3D"http://www.w3.org/2000/svg"=
+ preserveAspectRatio=3D"xMidYMid meet" width=3D"22px" height=3D"13px" viewB=
+ox=3D"-3 -2 22 13" class=3D"u7 uzlpSb"><path d=3D"m3.988,3.428c.281-.272 .3=
+06-.65 .306-.863 0-.851-.526-2.175-1.54-2.175-.317,0-.66,.153-.855,.391-.20=
+9,.247-.27,.566-.27,.874 0,.791 .477,2.103 1.528,2.103 .305-0 .635-.141 .83=
+1-.33m-.798,2.233c0,0-.68,.06-1.193,.224-.269,.094-.978,.344-.978,1.181 0,.=
+84 .843,1.441 2.151,1.441 1.173,0 1.797-.544 1.797-1.275 0-.604-.589-1.209-=
+1.333-1.562-.14,.008-.444-.009-.444-.009zm1.552-5.081c.205,.243 .627,.633=
+ .627,1.44 0,.875-.514,1.289-1.026,1.679-.16,.154-.343,.32-.343,.579 0,.259=
+ .184,.402 .318,.508l.44,.331c.538,.438 1.026,.84 1.026,1.654 .001,1.113-1.=
+113,2.229-3.213,2.229-1.773,0-2.527-.811-2.527-1.686-0-.426 .118-1.114 .84-=
+1.528 .757-.449 1.622-.49 2.17-.526-.171-.213-.203-.366-.203-.733 0-.201 .0=
+62-.32 .123-.462-.135,.012-.27,.023-.392,.023-1.295,0-2.029-.934-2.029-1.85=
+5 0-.544 .257-1.146 .782-1.584 .698-.554 1.529-.649 2.189-.649h2.417l-.6,.5=
+8h-.599z"></path><path d=3D"m3.988,3.428c.281-.272 .306-.65 .306-.863 0-.85=
+1-.526-2.175-1.54-2.175-.317,0-.66,.153-.855,.391-.209,.247-.27,.566-.27,.8=
+74 0,.791 .477,2.103 1.528,2.103 .305-0 .635-.141 .831-.33m-.798,2.233c0,0-=
+.68,.06-1.193,.224-.269,.094-.978,.344-.978,1.181 0,.84 .843,1.441 2.151,1.=
+441 1.173,0 1.797-.544 1.797-1.275 0-.604-.589-1.209-1.333-1.562-.14,.008-.=
+444-.009-.444-.009zm1.552-5.081c.205,.243 .627,.633 .627,1.44 0,.875-.514,1=
+.289-1.026,1.679-.16,.154-.343,.32-.343,.579 0,.259 .184,.402 .318,.508l.44=
+,.331c.538,.438 1.026,.84 1.026,1.654 .001,1.113-1.113,2.229-3.213,2.229-1.=
+773,0-2.527-.811-2.527-1.686-0-.426 .118-1.114 .84-1.528 .757-.449 1.622-.4=
+9 2.17-.526-.171-.213-.203-.366-.203-.733 0-.201 .062-.32 .123-.462-.135,.0=
+12-.27,.023-.392,.023-1.295,0-2.029-.934-2.029-1.855 0-.544 .257-1.146 .782=
+-1.584 .698-.554 1.529-.649 2.189-.649h2.417l-.6,.58h-.599z"></path><path=
+ d=3D"m13.997,1-.997,0 0,1 1,0 0,6 1,0 0-6 0-1z"></path><path d=3D"m12,4-2,=
+0 0-2-1,0 0,2-2,0 0,1 2,0 0,2 1,0 0-2 2,0z"></path></svg><div class=3D"xuwm=
+vb xuwmvb-hxGuWb"></div></div></div><div class=3D"GP"><svg version=3D"1.1"=
+ xmlns=3D"http://www.w3.org/2000/svg" preserveAspectRatio=3D"xMidYMid meet"=
+ width=3D"15px" height=3D"13px" viewBox=3D"-2.5454545454545454 -1.272727272=
+7272727 19.09090909090909 16.545454545454547" class=3D"u7 u7 iva"><g id=3D"=
+Q0N8Vc" fill=3D"#aaaaaa" transform=3D"rotate(0,7,7)"><path class=3D"zVaWQ"=
+ d=3D"M5.5,1.5h3v4h4v3h-4v4h-3v-4h-4v-3h4z"></path></g></svg><div class=3D"=
+C9sAve C9sAve-hxGuWb"></div></div><div class=3D"q7"><svg version=3D"1.1" xm=
+lns=3D"http://www.w3.org/2000/svg" preserveAspectRatio=3D"xMidYMid meet" wi=
+dth=3D"12px" height=3D"13px" viewBox=3D"0 -1.6363636363636362 20 21.2727272=
+72727273" class=3D"u7 u7 hva"><path fill=3D"#DD4B39" d=3D"m19.8059,16.041-8=
+.74-15.404c-.223-.394-.635-.637-1.078-.637-.443,0-.855,.243-1.078,.637l-8.7=
+39,15.404c-.227,.396-.227,.9-.005,1.299 .223,.398 .637,.66 1.283,.66h17.279=
+c.445,0 .859-.262 1.082-.66 .22-.399 .22-.902-.004-1.299zm-9.798-1.041c-.55=
+2,0-1-.463-1-1.02 0-.555 .448-1.002 1-1.002 .552,0 1,.447 1,1.002-.001,.557=
+-.448,1.02-1,1.02zm.999-9-.375,5h-1.25l-.374-5h.004l-.004-.02c0-.551 .448-.=
+996 1-.996 .552,0 1,.449 1,1-.001,.007-.004,.016-.004,.016h.003z"></path></=
+svg><div class=3D"tapvDe tapvDe-hxGuWb"></div></div></div></div></span></di=
+v></div>
+
+</body></html>
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-6A31EE3A:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index_15.css
+
+/* Effective stylesheet produced by snapshot save */
+body {  }
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("urn:not-loaded:file:///home/mahmood/.mozilla/firefox/bx40q2ki.d=
+efault/ScrapBook/data/20141213170133/grlryt2bdkiyfmsohzd1ea.woff") format("=
+woff");
+}
+* html .d-k-l, :first-child + html .d-k-l { display: inline; }
+.FP { border: 1px solid rgba(0, 0, 0, 0.17); border-radius: 2px; box-shadow=
+: 0px 1px 0px rgba(0, 0, 0, 0.05); box-sizing: border-box; transition: back=
+ground-color 0.218s ease 0s, border-color 0.218s ease 0s, box-shadow 0.218s=
+ ease 0s; -moz-user-select: none; background-color: rgb(255, 255, 255); bac=
+kground-image: none; color: rgb(38, 38, 38); cursor: pointer; outline: medi=
+um none; overflow: hidden; position: relative; text-align: center; vertical=
+-align: middle; white-space: nowrap; width: auto; }
+.FP:hover { border: 1px solid rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px=
+ rgba(0, 0, 0, 0.1); }
+.FP:active { background-color: rgb(229, 229, 229); border: 1px solid rgba(0=
+, 0, 0, 0.25); box-shadow: 0px 1px 0px rgb(221, 221, 221) inset; color: rgb=
+(38, 38, 38); }
+.s7 { float: left; }
+.u7 { display: block; }
+.Ul { height: 100%; width: 100%; }
+.q7, .GP { display: none; height: 100%; width: 100%; }
+.hva, .iva { margin-left: auto; margin-right: auto; }
+.zVaWQ { animation: 2s linear 0s normal none infinite running ozWidgetRioBu=
+ttonWorkingIconPathSpinKeyframes; transform-origin: 7px 7px 0px; }
+.HP, .HP:hover, .HP:active { color: rgb(221, 75, 57); }
+.uzlpSb { fill: rgb(221, 75, 56); }
+.dIa { float: left; white-space: nowrap; }
+.Ina { cursor: pointer; display: block; outline: 0px none; position: relati=
+ve; text-decoration: none; }
+.kv8eNc { background-color: transparent; margin: 0px; padding: 0px; }
+
+------=_NextPart_000_0000_E317ADEB.A1804A0A
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-9B2D982B:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213170133/index_16.html
+
+<!DOCTYPE html><html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<title></title><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><=
+meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1,=
+ minimum-scale=3D1, maximum-scale=3D1, user-scalable=3D0"></head>
+<body>
+
+</body></html>
+------=_NextPart_000_0000_E317ADEB.A1804A0A--

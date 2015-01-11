@@ -1,0 +1,209 @@
+From: <Saved by Mozilla 5.0 (X11)>
+Subject: Python Scripting Tutorial (Introduction)
+Date: Sat, 13 Dec 2014 18:30:08 +0330
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_EDA1045C.477FEA16"
+X-MAF-Information: Produced By MAF V3.0.3
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_EDA1045C.477FEA16
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213182918/index.html
+
+<html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+
+
+
+
+
+
+<meta name=3D"description" content=3D"Python Scripting (Programming) Tutori=
+al">
+<meta name=3D"keywords" content=3D"unix, linux, python, shell, script, scri=
+pting, programming, tutorial, help">
+
+<title>Python Scripting Tutorial (Introduction)</title>
+
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"urn:snapshot-EA53A676:fi=
+le:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/2014121=
+3182918/index.css" media=3D"all">
+</head>
+<body topmargin=3D"0" leftmargin=3D"0" bgproperties=3D"fixed" bgcolor=3D"ff=
+ffff">
+
+
+
+<table style=3D"background-color: rgb(221, 221, 221); border-bottom: 1px so=
+lid rgb(153, 153, 153);" width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0">
+<tbody><tr>
+<td align=3D"right">
+
+<!-- SiteSearch Google -->
+
+<!-- SiteSearch Google -->
+</td>
+</tr>
+</tbody></table>
+
+<table width=3D"100%" border=3D"0" cellpadding=3D"5" cellspacing=3D"0">
+<tbody><tr>
+
+<td valign=3D"top">
+
+
+
+<p><font size=3D"3"><b>Introduction</b></font></p>
+<p>
+	Python is a great flexible programming language that can be used in many=
+ situations.  In this tutorial, we will focus primarily
+	on it's ability to enhance the Unix/Linux shell environment.  Typically in=
+ Unix you will create "bash" shell scripts, but you can also
+	create shell scripts using python, and it's really simple!  You can even=
+ name your shell scripts with the .sh extension and run them
+	as you would run any bash shell script.  All you need to do this is to mod=
+ify the very first line of your file like so:
+</p>
+<pre class=3D"prettyprint lang-py prettyprinted"><span class=3D"com">#!/usr=
+/bin/env python</span></pre>
+
+<p>
+	In this tutorial, we will use the extension .py, just to help us know that=
+ the script contians python code and not standard unix shell commands.
+</p>
+
+<p>
+	The first script that we will use will be a simple script that will output=
+ the text "Hello Python".
+	You can use any file editor, personally, I use <b>vi</b>.  Create a file=
+ named "hello.py" and use the following for its contents:
+</p>
+
+<pre class=3D"prettyprint lang-py prettyprinted"><span class=3D"com">#!/usr=
+/bin/env python</span><span class=3D"pln">
+</span><span class=3D"com"># This is my first script.</span><span class=3D"=
+pln">
+
+</span><span class=3D"kwd">print</span><span class=3D"pln"> </span><span cl=
+ass=3D"str">"Hello Python"</span></pre>
+
+<p>
+	Two things you will notice besides the header which we previously discusse=
+d. The second line starting with "#" is
+	a comment.
+	Comments are ignored by the interpreter but are very useful when developin=
+g large
+	and complex scripts.  Everyone forgets what their original logic or intent=
+ion was when coding a script
+	and it's much easier to read a comment than it is to try to understand lar=
+ge and complex sections of code.
+</p>
+
+<p>
+	The next thing you will notice is <b>print</b> keyword. This will print te=
+xt to the console, much line the unix "echo" command.
+</p>
+
+<p>
+	Assuming you are running on unix, before we can run this script, we must=
+ first make it executable. To do this we will use the unix chmod command:
+</p>
+
+<pre class=3D"prettyprint lang-py prettyprinted"><span class=3D"pln">chmod=
+ u</span><span class=3D"pun">+</span><span class=3D"pln">x hello</span><spa=
+n class=3D"pun">.</span><span class=3D"pln">py</span></pre>
+
+<p>
+	Now our script is executable.  This command basically tells unix to set th=
+e x (executable) flag for the user level access of the file.
+	Now we are able to run the file.  If you don't have "." in your unix PATH=
+ environment variable, then you will need to proceed the name
+	of the script with "./" to execute it.  It is generally considered to be=
+ a security risk to put "." in your PATH evironment variable, so
+	we will assume that you don't have it.  Now you can execute your script by=
+ using the following command:
+</p>
+
+<pre class=3D"prettyprint lang-py prettyprinted"><span class=3D"pun">./</sp=
+an><span class=3D"pln">hello</span><span class=3D"pun">.</span><span class=
+=3D"pln">py</span></pre>
+
+<p>
+	You will see the text "Hello Python" output to the console, congratulation=
+s, you have created your first python script!  Now you can
+	move on to the next topic where we will discuss using variables in a unix=
+ script.
+</p>
+
+
+
+</td>
+
+
+
+</tr>
+
+</tbody></table>
+
+<br><br>
+
+
+
+<iframe tabindex=3D"-1" style=3D"width: 1px; height: 1px; position: absolut=
+e; top: -100px;" src=3D"urn:snapshot-C15CA921:file:///home/mahmood/.mozilla=
+/firefox/bx40q2ki.default/ScrapBook/data/20141213182918/index_16.html" id=
+=3D"oauth2relay813026540" name=3D"oauth2relay813026540"></iframe>
+
+</body></html>
+------=_NextPart_000_0000_EDA1045C.477FEA16
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-EA53A676:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213182918/index.css
+
+/* Effective stylesheet produced by snapshot save */
+body, table { background-repeat: no-repeat; font-family: tahoma; font-size:=
+ 8pt; color: rgb(48, 48, 48); letter-spacing: 1px; }
+p { font: 1.25em Verdana,Arial; }
+b {  }
+.prettyprint { font-size: 1.2em; }
+.pln { color: rgb(77, 77, 76); }
+@media screen {
+  .str { color: rgb(113, 140, 0); }
+  .kwd { color: rgb(137, 89, 168); }
+  .com { color: rgb(142, 144, 140); }
+  .pun { color: rgb(77, 77, 76); }
+}
+pre.prettyprint { background: none repeat scroll 0% 0% white; font-family:=
+ Menlo,"Bitstream Vera Sans Mono","DejaVu Sans Mono",Monaco,Consolas,monosp=
+ace; font-size: 12px; line-height: 1.5; border: 1px solid rgb(204, 204, 204=
+); padding: 10px; }
+.pln { color: rgb(0, 0, 0); }
+@media screen {
+  .str { color: rgb(0, 136, 0); }
+  .kwd { color: rgb(0, 0, 136); }
+  .com { color: rgb(136, 0, 0); }
+  .pun, .opn, .clo { color: rgb(102, 102, 0); }
+}
+pre.prettyprint { padding: 2px; border: 1px solid rgb(136, 136, 136); }
+
+------=_NextPart_000_0000_EDA1045C.477FEA16
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-C15CA921:file:///home/mahmood/.mozilla/firefox/bx40q2ki.default/ScrapBook/data/20141213182918/index_16.html
+
+<html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+</head>
+<body>
+
+</body></html>
+------=_NextPart_000_0000_EDA1045C.477FEA16--
