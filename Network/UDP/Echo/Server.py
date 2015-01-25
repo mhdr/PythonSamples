@@ -9,5 +9,7 @@ s.bind((host,port))
 while True:
     dataB,address=s.recvfrom(1024)
     print(address)
+
+    s.sendto(dataB,address)
     data=bytes.decode(dataB)
     print(data)
