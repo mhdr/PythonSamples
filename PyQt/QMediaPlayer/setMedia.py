@@ -8,7 +8,7 @@ app = QApplication(sys.argv)
 
 player=QMediaPlayer()
 
-path=QUrl.fromLocalFile("/home/mahmood/MPLS.mp4")
+path=QUrl.fromLocalFile("C:\MPLS.mp4")
 media=QMediaContent(path)
 
 playlist=QMediaPlaylist()
@@ -24,5 +24,3 @@ video.show()
 player.play()
 
 app.exec_()
-
-# no completed
