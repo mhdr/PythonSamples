@@ -4,7 +4,6 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import sys
 from Converter import Converter
-from chardet.universaldetector import UniversalDetector
 
 
 class Form(QWidget):
@@ -46,6 +45,7 @@ class Form(QWidget):
         fileName=self.lineedit.text()
         file=QFile(fileName)
 
+        # check if a file is selected
         if len(fileName)==0:
             msgBox=QMessageBox()
             msgBox.setWindowTitle(" ")
@@ -55,9 +55,11 @@ class Form(QWidget):
             return
 
 
+        # get file extension
         fileInfo=QFileInfo(fileName)
         suffix= fileInfo.completeSuffix()
 
+        # check extension
         if suffix!="srt":
             msgBox=QMessageBox()
             msgBox.setWindowTitle(" ")
@@ -66,6 +68,7 @@ class Form(QWidget):
             msgBox.exec_()
             return
 
+        # check if file exist
         if file.exists():
             converter=Converter(fileName)
             converter.convert()
