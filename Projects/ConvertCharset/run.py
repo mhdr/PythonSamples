@@ -10,6 +10,10 @@ class Form(QWidget):
     def __init__(self,parent=None):
         super(Form, self).__init__(parent)
 
+        # initialize settings
+        self.settings=QSettings("settings.ini",QSettings.IniFormat)
+
+        # initialize UI
         self.setFixedHeight(150)
         self.setWindowTitle("Subtitle Converter")
 
@@ -33,13 +37,30 @@ class Form(QWidget):
 
         self.setLayout(self.layout)
 
+        # restore geometry
+        mainWidgetGeometry= self.settings.value("Geometry/MainWidget")
+        self.restoreGeometry(mainWidgetGeometry)
+
     def button_browse_clicked(self,checked=False):
+        lastFilePath=self.settings.value("LastFilePath")
+
         dialog=QFileDialog()
+
+        # restore last file path if exist
+        if len(lastFilePath) > 0 :
+            if QDir(lastFilePath).exists() :
+                dialog.setDirectory(lastFilePath)
+
         dialog.setNameFilter("Subtitles (*.srt)")
         file= dialog.getOpenFileName()
         fileName=file[0]
         self.lineedit.setText(fileName)
 
+        # save last file path
+        fileInfo=QFileInfo(fileName)
+        dir=fileInfo.absoluteDir()
+        selectedPath= dir.canonicalPath()
+        self.settings.setValue("LastFilePath",selectedPath)
 
     def button_convert_clicked(self,checked=False):
         fileName=self.lineedit.text()
@@ -84,6 +105,9 @@ class Form(QWidget):
             msgBox.setText("The file doesn't exist")
             msgBox.setIcon(QMessageBox.Critical)
             msgBox.exec_()
+
+    def closeEvent(self,event):
+        self.settings.setValue("Geometry/MainWidget",self.saveGeometry())
 
 app = QApplication(sys.argv)
 
