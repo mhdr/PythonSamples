@@ -39,7 +39,9 @@ class Form(QWidget):
 
         # restore geometry
         mainWidgetGeometry= self.settings.value("Geometry/MainWidget")
-        self.restoreGeometry(mainWidgetGeometry)
+
+        if mainWidgetGeometry!=None :
+            self.restoreGeometry(mainWidgetGeometry)
 
     def button_browse_clicked(self,checked=False):
         lastFilePath=self.settings.value("LastFilePath")
@@ -47,9 +49,10 @@ class Form(QWidget):
         dialog=QFileDialog()
 
         # restore last file path if exist
-        if len(lastFilePath) > 0 :
-            if QDir(lastFilePath).exists() :
-                dialog.setDirectory(lastFilePath)
+        if lastFilePath!=None :
+            if len(lastFilePath) > 0 :
+                if QDir(lastFilePath).exists() :
+                    dialog.setDirectory(lastFilePath)
 
         dialog.setNameFilter("Subtitles (*.srt)")
         file= dialog.getOpenFileName()
