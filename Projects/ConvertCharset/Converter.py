@@ -1,6 +1,5 @@
 import codecs
 import shutil
-import sys
 import os
 
 class Converter :
