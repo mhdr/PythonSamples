@@ -1,10 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import sys
 from Converter import Converter
 
+ASSERT=False
 
 class Form(QWidget):
     def __init__(self,parent=None):
@@ -14,14 +15,14 @@ class Form(QWidget):
         self.settings=QSettings("settings.ini",QSettings.IniFormat)
 
         # initialize UI
-        self.setFixedHeight(150)
+        self.setMinimumHeight(125)
         self.setWindowTitle("Subtitle Converter")
 
         self.label=QLabel("File")
 
-        self.lineedit=QLineEdit()
-        self.lineedit.setFixedWidth(600)
-        self.lineedit.setReadOnly(True)
+        self.lineEdit=QLineEdit()
+        self.lineEdit.setFixedWidth(600)
+        self.lineEdit.setReadOnly(True)
 
         self.button_browse=QPushButton("Browse...")
         self.button_browse.clicked.connect(self.button_browse_clicked)
@@ -31,7 +32,7 @@ class Form(QWidget):
 
         self.layout=QHBoxLayout()
         self.layout.addWidget(self.label)
-        self.layout.addWidget(self.lineedit)
+        self.layout.addWidget(self.lineEdit)
         self.layout.addWidget(self.button_browse)
         self.layout.addWidget(self.button_convert)
 
@@ -42,6 +43,8 @@ class Form(QWidget):
 
         if mainWidgetGeometry!=None :
             self.restoreGeometry(mainWidgetGeometry)
+
+
 
     def button_browse_clicked(self,checked=False):
         lastFilePath=self.settings.value("LastFilePath")
@@ -56,17 +59,21 @@ class Form(QWidget):
 
         dialog.setNameFilter("Subtitles (*.srt)")
         file= dialog.getOpenFileName()
+
+        if ASSERT : assert isinstance(file, tuple)
+
         fileName=file[0]
-        self.lineedit.setText(fileName)
+        self.lineEdit.setText(fileName)
 
         # save last file path
         fileInfo=QFileInfo(fileName)
         dir=fileInfo.absoluteDir()
+        if ASSERT : assert isinstance(dir, QDir())
         selectedPath= dir.canonicalPath()
         self.settings.setValue("LastFilePath",selectedPath)
 
     def button_convert_clicked(self,checked=False):
-        fileName=self.lineedit.text()
+        fileName=self.lineEdit.text()
         file=QFile(fileName)
 
         # check if a file is selected
