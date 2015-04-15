@@ -88,7 +88,7 @@ class Form(QWidget):
 
         # get file extension
         fileInfo=QFileInfo(fileName)
-        suffix= fileInfo.completeSuffix()
+        suffix= fileInfo.suffix()
 
         # check extension
         if suffix!="srt":
