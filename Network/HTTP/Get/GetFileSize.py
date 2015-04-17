@@ -3,9 +3,9 @@ import socket
 CRLF = "\r\n"
 
 request = [
-    "GET /hello.txt HTTP/1.1",
+    "HEAD /Keygen.exe HTTP/1.1",
     "Host: 192.168.150.129",
-    "Connection: Close",
+    "Connection: Keep-Alive",
     "",
     "",
 ]
@@ -24,8 +24,11 @@ while buffer:
     response += buffer
     buffer = s.recv(4096)
 
-# HTTP headers will be separated from the body by an empty line
-header_data, _, body = response.partition(CRLF + CRLF)
+#print(response)
 
-#print header_data
-print(body)
+headers= response.split(CRLF)
+
+for h in headers :
+    label,_,value=h.partition(":")
+    if label.strip()=="Content-Length":
+        print(value.strip())
