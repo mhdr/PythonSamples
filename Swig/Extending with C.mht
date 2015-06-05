@@ -1,0 +1,1409 @@
+From: <Saved by UnMHT Ver.7.3.0.5>
+Subject: Python Programming/Extending with C - Wikibooks, open books for an open world
+Date: Fri, 05 Jun 2015 17:46:46 +0450
+MIME-Version: 1.0
+X-UnMHT-Save-State: Current-State
+Content-Type: multipart/related;
+	boundary="----=_Part_3507F544_E13E9FCC.14DC3DDDDAC";
+	type="text/html"
+
+------=_Part_3507F544_E13E9FCC.14DC3DDDDAC
+Content-Location: file:///home/mahmood/.mozilla/firefox/ctg6ogbg.default/ScrapBook/data/20150605174535/index.html
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset="UTF-8"
+
+<!DOCTYPE html>
+<html class=3D"client-js ve-not-available" dir=3D"ltr" lang=3D"en"><head><m=
+eta charset=3D"UTF-8">
+
+
+
+<title>Python Programming/Extending with C - Wikibooks, open books for an o=
+pen world</title>
+<meta content=3D"MediaWiki 1.26wmf8" name=3D"generator">
+<link href=3D"https://en.wikibooks.org/w/index.php?title=3DPython_Programmi=
+ng/Extending_with_C&amp;action=3Dedit" rel=3D"alternate" title=3D"Edit" typ=
+e=3D"application/x-wiki">
+<link href=3D"https://en.wikibooks.org/w/index.php?title=3DPython_Programmi=
+ng/Extending_with_C&amp;action=3Dedit" rel=3D"edit" title=3D"Edit">
+<link href=3D"wikibooks.ico" rel=3D"shortcut icon">
+<link href=3D"https://en.wikibooks.org/w/opensearch_desc.php" rel=3D"search=
+" title=3D"Wikibooks (en)" type=3D"application/opensearchdescription+xml">
+<link href=3D"https://en.wikibooks.org/w/api.php?action=3Drsd" rel=3D"EditU=
+RI" type=3D"application/rsd+xml">
+<link href=3D"https://en.wikibooks.org/wiki/Python_Programming/Extending_wi=
+th_C" hreflang=3D"x-default" rel=3D"alternate">
+<link href=3D"https://creativecommons.org/licenses/by-sa/3.0/" rel=3D"copyr=
+ight">
+<link href=3D"https://en.wikibooks.org/w/index.php?title=3DSpecial:RecentCh=
+anges&amp;feed=3Datom" rel=3D"alternate" title=3D"Wikibooks Atom feed" type=
+=3D"application/atom+xml">
+<link href=3D"http://en.wikibooks.org/wiki/Python_Programming/Extending_wit=
+h_C" rel=3D"canonical">
+
+<meta content=3D"" name=3D"ResourceLoaderDynamicStyles">
+
+
+
+
+
+
+<link href=3D"https://meta.wikimedia.org/" rel=3D"dns-prefetch">
+<!--[if lt IE 7]><style type=3D"text/css">body{behavior:url("/w/static/1.26=
+wmf8/skins/Vector/csshover.min.htc")}</style><![endif]-->
+
+<link href=3D"index.css" media=3D"all" rel=3D"stylesheet" type=3D"text/css">
+<script>try {  for(var lastpass_iter=3D0; lastpass_iter < document.forms.le=
+ngth; lastpass_iter++){    var lastpass_f =3D document.forms[lastpass_iter]=
+;    if(typeof(lastpass_f.lpsubmitorig)=3D=3D"undefined"){      if (typeof(=
+lastpass_f.submit) =3D=3D "function") {        lastpass_f.lpsubmitorig =3D =
+lastpass_f.submit;        lastpass_f.submit =3D function(){          var fo=
+rm =3D this;          try {            if (document.documentElement && 'cre=
+ateEvent' in document)            {              var forms =3D document.get=
+ElementsByTagName('form');              for (var i=3D0 ; i<forms.length ; +=
++i)                if (forms[i]=3D=3Dform)                {                =
+  var element =3D document.createElement('lpformsubmitdataelement');       =
+           element.setAttribute('formnum',i);                  element.setA=
+ttribute('from','submithook');                  document.documentElement.ap=
+pendChild(element);                  var evt =3D document.createEvent('Even=
+ts');                  evt.initEvent('lpformsubmit',true,false);           =
+       element.dispatchEvent(evt);                  break;                }=
+            }          } catch (e) {}          try {            form.lpsubm=
+itorig();          } catch (e) {}        }      }    }  }} catch (e) {}</sc=
+ript><base href=3D"file:///home/mahmood/.mozilla/firefox/ctg6ogbg.default/S=
+crapBook/data/20150605174535/"></head>
+<body class=3D"mediawiki ltr sitedir-ltr ns-0 ns-subject page-Python_Progra=
+mming_Extending_with_C skin-vector action-view">
+	=09
+	=09
+		<div class=3D"mw-body" id=3D"content" role=3D"main">
+			<a id=3D"top"></a>
+
+							<div id=3D"siteNotice"><div id=3D"centralNotice"></div><!-- CentralN=
+otice --></div>
+						<div class=3D"mw-indicators">
+</div>
+			<h1 class=3D"firstHeading" id=3D"firstHeading" lang=3D"en">Python Progra=
+mming/Extending with C</h1>
+									<div class=3D"mw-body-content" id=3D"bodyContent">
+									<div id=3D"siteSub">From Wikibooks, open books for an open world</=
+div>
+								<div id=3D"contentSub"><span class=3D"subpages">&lt; <a href=3D"htt=
+ps://en.wikibooks.org/wiki/Python_Programming" title=3D"Python Programming"=
+>Python Programming</a></span></div>
+												<div class=3D"mw-jump" id=3D"jump-to-nav">
+					Jump to:					<a href=3D"#mw-head">navigation</a>, 					<a href=3D"#p-s=
+earch">search</a>
+				</div>
+				<div class=3D"mw-content-ltr" dir=3D"ltr" id=3D"mw-content-text" lang=
+=3D"en"><div class=3D"noprint">
+<table style=3D"border: 1px solid black; width: 100%; border-spacing: 0px; =
+margin: 0.25em;">
+<tbody><tr>
+<td bgcolor=3D"#FFFFE0" width=3D"33%"><a class=3D"new" href=3D"https://en.w=
+ikibooks.org/w/index.php?title=3DPython_Programming/HTTP_Tools&amp;action=
+=3Dedit&amp;redlink=3D1" title=3D"Python Programming/HTTP Tools (does not e=
+xist)">Previous: HTTP Tools</a></td>
+<td align=3D"center" bgcolor=3D"#FFFFE0" width=3D"33%"><a href=3D"https://e=
+n.wikibooks.org/wiki/Python_Programming" title=3D"Python Programming">Index=
+</a></td>
+<td align=3D"right" bgcolor=3D"#FFFFE0" width=3D"33%"><a href=3D"https://en=
+.wikibooks.org/wiki/Python_Programming/Extending_with_C%2B%2B" title=3D"Pyt=
+hon Programming/Extending with C++">Next: Extending with C++</a></td>
+</tr>
+</tbody></table>
+</div>
+<p>This gives a minimal Example on how to Extend Python with C. Linux is us=
+ed for building (feel free to extend it for other Platforms). If you have a=
+ny problems, please report them (e.g. on the dicussion page), I will check =
+back in a while and try to sort them out.</p>
+<p></p>
+<div class=3D"toc" id=3D"toc">
+<div id=3D"toctitle">
+<h2>Contents</h2>
+<span class=3D"toctoggle">&#xa0;[<a href=3D"#" id=3D"togglelink">hide</a>]&=
+#xa0;</span></div>
+<ul>
+<li class=3D"toclevel-1 tocsection-1"><a href=3D"#Using_the_Python.2FC_API"=
+><span class=3D"tocnumber">1</span> <span class=3D"toctext">Using the Pytho=
+n/C API</span></a>
+<ul>
+<li class=3D"toclevel-2 tocsection-2"><a href=3D"#A_minimal_example"><span =
+class=3D"tocnumber">1.1</span> <span class=3D"toctext">A minimal example</s=
+pan></a>
+<ul>
+<li class=3D"toclevel-3 tocsection-3"><a href=3D"#The_C_source_code_.28hell=
+omodule.c.29"><span class=3D"tocnumber">1.1.1</span> <span class=3D"toctext=
+">The C source code (hellomodule.c)</span></a></li>
+<li class=3D"toclevel-3 tocsection-4"><a href=3D"#Building_the_extension_mo=
+dule_with_GCC_for_Linux"><span class=3D"tocnumber">1.1.2</span> <span class=
+=3D"toctext">Building the extension module with GCC for Linux</span></a></l=
+i>
+<li class=3D"toclevel-3 tocsection-5"><a href=3D"#Building_the_extension_mo=
+dule_with_GCC_for_Microsoft_Windows"><span class=3D"tocnumber">1.1.3</span>=
+ <span class=3D"toctext">Building the extension module with GCC for Microso=
+ft Windows</span></a></li>
+<li class=3D"toclevel-3 tocsection-6"><a href=3D"#Building_the_extension_mo=
+dule_using_Microsoft_Visual_C.2B.2B"><span class=3D"tocnumber">1.1.4</span>=
+ <span class=3D"toctext">Building the extension module using Microsoft Visu=
+al C++</span></a></li>
+<li class=3D"toclevel-3 tocsection-7"><a href=3D"#Using_the_extension_modul=
+e"><span class=3D"tocnumber">1.1.5</span> <span class=3D"toctext">Using the=
+ extension module</span></a></li>
+</ul>
+</li>
+<li class=3D"toclevel-2 tocsection-8"><a href=3D"#A_module_for_calculating_=
+fibonacci_numbers"><span class=3D"tocnumber">1.2</span> <span class=3D"toct=
+ext">A module for calculating fibonacci numbers</span></a>
+<ul>
+<li class=3D"toclevel-3 tocsection-9"><a href=3D"#The_C_source_code_.28fibm=
+odule.c.29"><span class=3D"tocnumber">1.2.1</span> <span class=3D"toctext">=
+The C source code (fibmodule.c)</span></a></li>
+<li class=3D"toclevel-3 tocsection-10"><a href=3D"#The_build_script_.28setu=
+p.py.29"><span class=3D"tocnumber">1.2.2</span> <span class=3D"toctext">The=
+ build script (setup.py)</span></a></li>
+<li class=3D"toclevel-3 tocsection-11"><a href=3D"#How_to_use_it.3F"><span =
+class=3D"tocnumber">1.2.3</span> <span class=3D"toctext">How to use it?</sp=
+an></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class=3D"toclevel-1 tocsection-12"><a href=3D"#Using_SWIG"><span class=
+=3D"tocnumber">2</span> <span class=3D"toctext">Using SWIG</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class=3D"mw-headline" id=3D"Using_the_Python.2FC_API">Using the P=
+ython/C API</span><span class=3D"mw-editsection"><span class=3D"mw-editsect=
+ion-bracket">[</span><a href=3D"https://en.wikibooks.org/w/index.php?title=
+=3DPython_Programming/Extending_with_C&amp;action=3Dedit&amp;section=3D1" t=
+itle=3D"Edit section: Using the Python/C API">edit</a><span class=3D"mw-edi=
+tsection-bracket">]</span></span></h2>
+<p>On an Ubuntu system, you might need to run</p>
+<div class=3D"mw-geshi mw-code mw-content-ltr" dir=3D"ltr">
+<div class=3D"bash source-bash">
+<pre class=3D"de1"><span class=3D"co4">$ </span><span class=3D"kw2">sudo</s=
+pan> <span class=3D"kw2">apt-get install</span> python-dev
+</pre></div>
+</div>
+<p>This command installs you the python developement package and ensures th=
+at you can use the line <code>#include &lt;Python.h&gt;</code> in the C sou=
+rce code. On other systems like openSUSE the needed package calls <code>pyt=
+hon-devel</code> and can be installed by using <code>zypper</code>:</p>
+<div class=3D"mw-geshi mw-code mw-content-ltr" dir=3D"ltr">
+<div class=3D"bash source-bash">
+<pre class=3D"de1"><span class=3D"co4">$ </span><span class=3D"kw2">sudo</s=
+pan> zypper <span class=3D"kw2">install</span> python-devel
+</pre></div>
+</div>
+<ul>
+<li><a class=3D"external free" href=3D"https://docs.python.org/2/extending/=
+index.html" rel=3D"nofollow" target=3D"_top">https://docs.python.org/2/exte=
+nding/index.html</a></li>
+<li><a class=3D"external free" href=3D"https://docs.python.org/2/c-api/inde=
+x.html" rel=3D"nofollow" target=3D"_top">https://docs.python.org/2/c-api/in=
+dex.html</a></li>
+</ul>
+<h3><span class=3D"mw-headline" id=3D"A_minimal_example">A minimal example<=
+/span><span class=3D"mw-editsection"><span class=3D"mw-editsection-bracket"=
+>[</span><a href=3D"https://en.wikibooks.org/w/index.php?title=3DPython_Pro=
+gramming/Extending_with_C&amp;action=3Dedit&amp;section=3D2" title=3D"Edit =
+section: A minimal example">edit</a><span class=3D"mw-editsection-bracket">=
+]</span></span></h3>
+<p>The minimal example we will create now is very similar in behaviour to t=
+he following python snippet:</p>
+<div class=3D"mw-geshi mw-code mw-content-ltr" dir=3D"ltr">
+<div class=3D"python source-python">
+<pre class=3D"de1"> <span class=3D"kw1">def</span> say_hello<span class=3D"=
+br0">(</span>name<span class=3D"br0">)</span>:
+     <span class=3D"st0">&quot;Greet somebody.&quot;</span>
+     <span class=3D"kw1">print</span> <span class=3D"st0">&quot;Hello %s!&q=
+uot;</span> % name
+</pre></div>
+</div>
+<h4><span class=3D"mw-headline" id=3D"The_C_source_code_.28hellomodule.c.29=
+">The C source code (<tt>hellomodule.c</tt>)</span><span class=3D"mw-editse=
+ction"><span class=3D"mw-editsection-bracket">[</span><a href=3D"https://en=
+.wikibooks.org/w/index.php?title=3DPython_Programming/Extending_with_C&amp;=
+action=3Dedit&amp;section=3D3" title=3D"Edit section: The C source code (he=
+llomodule.c)">edit</a><span class=3D"mw-editsection-bracket">]</span></span=
+></h4>
+<div class=3D"mw-geshi mw-code mw-content-ltr" dir=3D"ltr">
+<div class=3D"c source-c">
+<pre class=3D"de1"><span class=3D"co2">#include &lt;Python.h&gt;</span>
+=20
+<span class=3D"kw4">static</span> PyObject<span class=3D"sy0">*</span>
+say_hello<span class=3D"br0">(</span>PyObject<span class=3D"sy0">*</span> s=
+elf<span class=3D"sy0">,</span> PyObject<span class=3D"sy0">*</span> args<s=
+pan class=3D"br0">)</span>
+<span class=3D"br0">{</span>
+    <span class=3D"kw4">const</span> <span class=3D"kw4">char</span><span c=
+lass=3D"sy0">*</span> name<span class=3D"sy0">;</span>
+=20
+    <span class=3D"kw1">if</span> <span class=3D"br0">(</span><span class=
+=3D"sy0">!</span>PyArg_ParseTuple<span class=3D"br0">(</span>args<span clas=
+s=3D"sy0">,</span> <span class=3D"st0">&quot;s&quot;</span><span class=3D"s=
+y0">,</span> <span class=3D"sy0">&amp;</span>name<span class=3D"br0">)</spa=
+n><span class=3D"br0">)</span>
+        <span class=3D"kw1">return</span> NULL<span class=3D"sy0">;</span>
+=20
+    <span class=3D"kw3">printf</span><span class=3D"br0">(</span><span clas=
+s=3D"st0">&quot;Hello %s!<span class=3D"es1">\n</span>&quot;</span><span cl=
+ass=3D"sy0">,</span> name<span class=3D"br0">)</span><span class=3D"sy0">;<=
+/span>
+=20
+    Py_RETURN_NONE<span class=3D"sy0">;</span>
+<span class=3D"br0">}</span>
+=20
+<span class=3D"kw4">static</span> PyMethodDef HelloMethods<span class=3D"br=
+0">[</span><span class=3D"br0">]</span> <span class=3D"sy0">=3D</span>
+<span class=3D"br0">{</span>
+     <span class=3D"br0">{</span><span class=3D"st0">&quot;say_hello&quot;<=
+/span><span class=3D"sy0">,</span> say_hello<span class=3D"sy0">,</span> ME=
+TH_VARARGS<span class=3D"sy0">,</span> <span class=3D"st0">&quot;Greet some=
+body.&quot;</span><span class=3D"br0">}</span><span class=3D"sy0">,</span>
+     <span class=3D"br0">{</span>NULL<span class=3D"sy0">,</span> NULL<span=
+ class=3D"sy0">,</span> <span class=3D"nu0">0</span><span class=3D"sy0">,</=
+span> NULL<span class=3D"br0">}</span>
+<span class=3D"br0">}</span><span class=3D"sy0">;</span>
+=20
+PyMODINIT_FUNC
+inithello<span class=3D"br0">(</span><span class=3D"kw4">void</span><span c=
+lass=3D"br0">)</span>
+<span class=3D"br0">{</span>
+     <span class=3D"br0">(</span><span class=3D"kw4">void</span><span class=
+=3D"br0">)</span> Py_InitModule<span class=3D"br0">(</span><span class=3D"s=
+t0">&quot;hello&quot;</span><span class=3D"sy0">,</span> HelloMethods<span =
+class=3D"br0">)</span><span class=3D"sy0">;</span>
+<span class=3D"br0">}</span>
+</pre></div>
+</div>
+<h4><span class=3D"mw-headline" id=3D"Building_the_extension_module_with_GC=
+C_for_Linux">Building the extension module with GCC for Linux</span><span c=
+lass=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a h=
+ref=3D"https://en.wikibooks.org/w/index.php?title=3DPython_Programming/Exte=
+nding_with_C&amp;action=3Dedit&amp;section=3D4" title=3D"Edit section: Buil=
+ding the extension module with GCC for Linux">edit</a><span class=3D"mw-edi=
+tsection-bracket">]</span></span></h4>
+<p>To build our extension module we create the file <tt>setup.py</tt> like:=
+</p>
+<div class=3D"mw-geshi mw-code mw-content-ltr" dir=3D"ltr">
+<div class=3D"python source-python">
+<pre class=3D"de1"><span class=3D"kw1">from</span> <span class=3D"kw3">dist=
+utils</span>.<span class=3D"me1">core</span> <span class=3D"kw1">import</sp=
+an> setup<span class=3D"sy0">,</span> Extension
+=20
+module1 <span class=3D"sy0">=3D</span> Extension<span class=3D"br0">(</span=
+><span class=3D"st0">&#x27;hello&#x27;</span><span class=3D"sy0">,</span> s=
+ources <span class=3D"sy0">=3D</span> <span class=3D"br0">[</span><span cla=
+ss=3D"st0">&#x27;hellomodule.c&#x27;</span><span class=3D"br0">]</span><spa=
+n class=3D"br0">)</span>
+=20
+setup <span class=3D"br0">(</span>name <span class=3D"sy0">=3D</span> <span=
+ class=3D"st0">&#x27;PackageName&#x27;</span><span class=3D"sy0">,</span>
+        version <span class=3D"sy0">=3D</span> <span class=3D"st0">&#x27;1.=
+0&#x27;</span><span class=3D"sy0">,</span>
+        description <span class=3D"sy0">=3D</span> <span class=3D"st0">&#x2=
+7;This is a demo package&#x27;</span><span class=3D"sy0">,</span>
+        ext_modules <span class=3D"sy0">=3D</span> <span class=3D"br0">[</s=
+pan>module1<span class=3D"br0">]</span><span class=3D"br0">)</span>
+</pre></div>
+</div>
+<p>Now we can build our module with</p>
+<pre>python setup.py build
+</pre>
+<p>The module <tt>hello.so</tt> will end up in <tt>build/lib.linux-i686-<i>=
+x</i>.<i>y</i></tt>.</p>
+<h4><span class=3D"mw-headline" id=3D"Building_the_extension_module_with_GC=
+C_for_Microsoft_Windows">Building the extension module with GCC for Microso=
+ft Windows</span><span class=3D"mw-editsection"><span class=3D"mw-editsecti=
+on-bracket">[</span><a href=3D"https://en.wikibooks.org/w/index.php?title=
+=3DPython_Programming/Extending_with_C&amp;action=3Dedit&amp;section=3D5" t=
+itle=3D"Edit section: Building the extension module with GCC for Microsoft =
+Windows">edit</a><span class=3D"mw-editsection-bracket">]</span></span></h4>
+<p>Microsoft Windows users can use <a class=3D"extiw" href=3D"https://en.wi=
+kipedia.org/wiki/MinGW" target=3D"_top" title=3D"w:MinGW">MinGW</a> to comp=
+ile this from <tt><a class=3D"extiw" href=3D"https://en.wikipedia.org/wiki/=
+cmd.exe" target=3D"_top" title=3D"w:cmd.exe">cmd.exe</a></tt> using a simil=
+ar method to Linux user, as shown above. Assuming <tt>gcc</tt> is in the <t=
+t>PATH</tt> environment variable, type:</p>
+<pre>python setup.py build -cmingw32
+</pre>
+<p>The module <tt>hello.pyd</tt> will end up in <tt>build\lib.win32-<i>x</i=
+>.<i>y</i></tt>, which is a Python Dynamic Module (similar to a <tt>DLL</tt=
+>).</p>
+<p>An alternate way of building the module in Windows is to build a DLL. (T=
+his method does not need an extension module file). From <tt>cmd.exe</tt>, =
+type:</p>
+<pre>gcc -c  hellomodule.c -I/Python<i>XY</i>/include
+gcc -shared hellomodule.o -L/Python<i>XY</i>/libs -lpython<i>XY</i> -o hell=
+o.dll
+</pre>
+<p>where <i>XY</i> represents the version of Python, such as &quot;24&quot;=
+ for version 2.4.</p>
+<h4><span class=3D"mw-headline" id=3D"Building_the_extension_module_using_M=
+icrosoft_Visual_C.2B.2B">Building the extension module using Microsoft Visu=
+al C++</span><span class=3D"mw-editsection"><span class=3D"mw-editsection-b=
+racket">[</span><a href=3D"https://en.wikibooks.org/w/index.php?title=3DPyt=
+hon_Programming/Extending_with_C&amp;action=3Dedit&amp;section=3D6" title=
+=3D"Edit section: Building the extension module using Microsoft Visual C++"=
+>edit</a><span class=3D"mw-editsection-bracket">]</span></span></h4>
+<p>With VC8 distutils is broken. We will use cl.exe from a command prompt i=
+nstead:</p>
+<pre>cl /LD hellomodule.c /Ic:\Python24\include c:\Python24\libs\python24.l=
+ib /link/out:hello.dll
+</pre>
+<h4><span class=3D"mw-headline" id=3D"Using_the_extension_module">Using the=
+ extension module</span><span class=3D"mw-editsection"><span class=3D"mw-ed=
+itsection-bracket">[</span><a href=3D"https://en.wikibooks.org/w/index.php?=
+title=3DPython_Programming/Extending_with_C&amp;action=3Dedit&amp;section=
+=3D7" title=3D"Edit section: Using the extension module">edit</a><span clas=
+s=3D"mw-editsection-bracket">]</span></span></h4>
+<p>Change to the subdirectory where the file `hello.so` resides. In an inte=
+ractive python session you can use the module as follows.</p>
+<pre>&gt;&gt;&gt; import hello
+&gt;&gt;&gt; hello.say_hello(&quot;World&quot;)
+Hello World!
+</pre>
+<h3><span class=3D"mw-headline" id=3D"A_module_for_calculating_fibonacci_nu=
+mbers">A module for calculating fibonacci numbers</span><span class=3D"mw-e=
+ditsection"><span class=3D"mw-editsection-bracket">[</span><a href=3D"https=
+://en.wikibooks.org/w/index.php?title=3DPython_Programming/Extending_with_C=
+&amp;action=3Dedit&amp;section=3D8" title=3D"Edit section: A module for cal=
+culating fibonacci numbers">edit</a><span class=3D"mw-editsection-bracket">=
+]</span></span></h3>
+<h4><span class=3D"mw-headline" id=3D"The_C_source_code_.28fibmodule.c.29">=
+The C source code (fibmodule.c)</span><span class=3D"mw-editsection"><span =
+class=3D"mw-editsection-bracket">[</span><a href=3D"https://en.wikibooks.or=
+g/w/index.php?title=3DPython_Programming/Extending_with_C&amp;action=3Dedit=
+&amp;section=3D9" title=3D"Edit section: The C source code (fibmodule.c)">e=
+dit</a><span class=3D"mw-editsection-bracket">]</span></span></h4>
+<div class=3D"mw-geshi mw-code mw-content-ltr" dir=3D"ltr">
+<div class=3D"c source-c">
+<pre class=3D"de1"><span class=3D"co2">#include &lt;Python.h&gt;</span>
+=20
+<span class=3D"kw4">int</span>
+_fib<span class=3D"br0">(</span><span class=3D"kw4">int</span> n<span class=
+=3D"br0">)</span>
+<span class=3D"br0">{</span>
+    <span class=3D"kw1">if</span> <span class=3D"br0">(</span>n <span class=
+=3D"sy0">&lt;</span> <span class=3D"nu0">2</span><span class=3D"br0">)</spa=
+n>
+        <span class=3D"kw1">return</span> n<span class=3D"sy0">;</span>
+    <span class=3D"kw1">else</span>
+        <span class=3D"kw1">return</span> _fib<span class=3D"br0">(</span>n=
+<span class=3D"sy0">-</span><span class=3D"nu0">1</span><span class=3D"br0"=
+>)</span> <span class=3D"sy0">+</span> _fib<span class=3D"br0">(</span>n<sp=
+an class=3D"sy0">-</span><span class=3D"nu0">2</span><span class=3D"br0">)<=
+/span><span class=3D"sy0">;</span>
+<span class=3D"br0">}</span>
+=20
+<span class=3D"kw4">static</span> PyObject<span class=3D"sy0">*</span>
+fib<span class=3D"br0">(</span>PyObject<span class=3D"sy0">*</span> self<sp=
+an class=3D"sy0">,</span> PyObject<span class=3D"sy0">*</span> args<span cl=
+ass=3D"br0">)</span>
+<span class=3D"br0">{</span>
+    <span class=3D"kw4">int</span> n<span class=3D"sy0">;</span>
+=20
+    <span class=3D"kw1">if</span> <span class=3D"br0">(</span><span class=
+=3D"sy0">!</span>PyArg_ParseTuple<span class=3D"br0">(</span>args<span clas=
+s=3D"sy0">,</span> <span class=3D"st0">&quot;i&quot;</span><span class=3D"s=
+y0">,</span> <span class=3D"sy0">&amp;</span>n<span class=3D"br0">)</span><=
+span class=3D"br0">)</span>
+        <span class=3D"kw1">return</span> NULL<span class=3D"sy0">;</span>
+=20
+    <span class=3D"kw1">return</span> Py_BuildValue<span class=3D"br0">(</s=
+pan><span class=3D"st0">&quot;i&quot;</span><span class=3D"sy0">,</span> _f=
+ib<span class=3D"br0">(</span>n<span class=3D"br0">)</span><span class=3D"b=
+r0">)</span><span class=3D"sy0">;</span>
+<span class=3D"br0">}</span>
+=20
+<span class=3D"kw4">static</span> PyMethodDef FibMethods<span class=3D"br0"=
+>[</span><span class=3D"br0">]</span> <span class=3D"sy0">=3D</span> <span =
+class=3D"br0">{</span>
+    <span class=3D"br0">{</span><span class=3D"st0">&quot;fib&quot;</span><=
+span class=3D"sy0">,</span> fib<span class=3D"sy0">,</span> METH_VARARGS<sp=
+an class=3D"sy0">,</span> <span class=3D"st0">&quot;Calculate the Fibonacci=
+ numbers.&quot;</span><span class=3D"br0">}</span><span class=3D"sy0">,</sp=
+an>
+    <span class=3D"br0">{</span>NULL<span class=3D"sy0">,</span> NULL<span =
+class=3D"sy0">,</span> <span class=3D"nu0">0</span><span class=3D"sy0">,</s=
+pan> NULL<span class=3D"br0">}</span>
+<span class=3D"br0">}</span><span class=3D"sy0">;</span>
+=20
+PyMODINIT_FUNC
+initfib<span class=3D"br0">(</span><span class=3D"kw4">void</span><span cla=
+ss=3D"br0">)</span>
+<span class=3D"br0">{</span>
+    <span class=3D"br0">(</span><span class=3D"kw4">void</span><span class=
+=3D"br0">)</span> Py_InitModule<span class=3D"br0">(</span><span class=3D"s=
+t0">&quot;fib&quot;</span><span class=3D"sy0">,</span> FibMethods<span clas=
+s=3D"br0">)</span><span class=3D"sy0">;</span>
+<span class=3D"br0">}</span>
+</pre></div>
+</div>
+<h4><span class=3D"mw-headline" id=3D"The_build_script_.28setup.py.29">The =
+build script (setup.py)</span><span class=3D"mw-editsection"><span class=3D=
+"mw-editsection-bracket">[</span><a href=3D"https://en.wikibooks.org/w/inde=
+x.php?title=3DPython_Programming/Extending_with_C&amp;action=3Dedit&amp;sec=
+tion=3D10" title=3D"Edit section: The build script (setup.py)">edit</a><spa=
+n class=3D"mw-editsection-bracket">]</span></span></h4>
+<div class=3D"mw-geshi mw-code mw-content-ltr" dir=3D"ltr">
+<div class=3D"python source-python">
+<pre class=3D"de1"><span class=3D"kw1">from</span> <span class=3D"kw3">dist=
+utils</span>.<span class=3D"me1">core</span> <span class=3D"kw1">import</sp=
+an> setup<span class=3D"sy0">,</span> Extension
+=20
+module1 <span class=3D"sy0">=3D</span> Extension<span class=3D"br0">(</span=
+><span class=3D"st0">&#x27;fib&#x27;</span><span class=3D"sy0">,</span> sou=
+rces <span class=3D"sy0">=3D</span> <span class=3D"br0">[</span><span class=
+=3D"st0">&#x27;fibmodule.c&#x27;</span><span class=3D"br0">]</span><span cl=
+ass=3D"br0">)</span>
+=20
+setup <span class=3D"br0">(</span>name <span class=3D"sy0">=3D</span> <span=
+ class=3D"st0">&#x27;PackageName&#x27;</span><span class=3D"sy0">,</span>
+        version <span class=3D"sy0">=3D</span> <span class=3D"st0">&#x27;1.=
+0&#x27;</span><span class=3D"sy0">,</span>
+        description <span class=3D"sy0">=3D</span> <span class=3D"st0">&#x2=
+7;This is a demo package&#x27;</span><span class=3D"sy0">,</span>
+        ext_modules <span class=3D"sy0">=3D</span> <span class=3D"br0">[</s=
+pan>module1<span class=3D"br0">]</span><span class=3D"br0">)</span>
+</pre></div>
+</div>
+<h4><span class=3D"mw-headline" id=3D"How_to_use_it.3F">How to use it?</spa=
+n><span class=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</=
+span><a href=3D"https://en.wikibooks.org/w/index.php?title=3DPython_Program=
+ming/Extending_with_C&amp;action=3Dedit&amp;section=3D11" title=3D"Edit sec=
+tion: How to use it?">edit</a><span class=3D"mw-editsection-bracket">]</spa=
+n></span></h4>
+<pre>&gt;&gt;&gt; import fib
+&gt;&gt;&gt; fib.fib(10)
+55
+</pre>
+<h2><span class=3D"mw-headline" id=3D"Using_SWIG">Using SWIG</span><span cl=
+ass=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a hr=
+ef=3D"https://en.wikibooks.org/w/index.php?title=3DPython_Programming/Exten=
+ding_with_C&amp;action=3Dedit&amp;section=3D12" title=3D"Edit section: Usin=
+g SWIG">edit</a><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<p>Creating the previous example using SWIG is much more straight forward. =
+To follow this path you need to get <a class=3D"external text" href=3D"http=
+://www.swig.org/" rel=3D"nofollow" target=3D"_top">SWIG</a> up and running =
+first. To install it on an Ubuntu system, you might need to run the followi=
+ng commands</p>
+<pre>$ sudo apt-get install swig
+$ sudo apt-get install python-dev
+</pre>
+<p>After that create two files.</p>
+<div class=3D"mw-geshi mw-code mw-content-ltr" dir=3D"ltr">
+<div class=3D"c source-c">
+<pre class=3D"de1"><span class=3D"coMULTI">/*hellomodule.c*/</span>
+=20
+<span class=3D"co2">#include &lt;stdio.h&gt;</span>
+=20
+<span class=3D"kw4">void</span> say_hello<span class=3D"br0">(</span><span =
+class=3D"kw4">const</span> <span class=3D"kw4">char</span><span class=3D"sy=
+0">*</span> name<span class=3D"br0">)</span> <span class=3D"br0">{</span>
+    <span class=3D"kw3">printf</span><span class=3D"br0">(</span><span clas=
+s=3D"st0">&quot;Hello %s!<span class=3D"es1">\n</span>&quot;</span><span cl=
+ass=3D"sy0">,</span> name<span class=3D"br0">)</span><span class=3D"sy0">;<=
+/span>
+<span class=3D"br0">}</span>
+</pre></div>
+</div>
+<div class=3D"mw-geshi mw-code mw-content-ltr" dir=3D"ltr">
+<div class=3D"c source-c">
+<pre class=3D"de1"><span class=3D"coMULTI">/*hello.i*/</span>
+=20
+<span class=3D"sy0">%</span>module hello
+<span class=3D"kw2">extern</span> <span class=3D"kw4">void</span> say_hello=
+<span class=3D"br0">(</span><span class=3D"kw4">const</span> <span class=3D=
+"kw4">char</span><span class=3D"sy0">*</span> name<span class=3D"br0">)</sp=
+an><span class=3D"sy0">;</span>
+</pre></div>
+</div>
+<p>Now comes the more difficult part, gluing it all together.</p>
+<p>First we need to let SWIG do its work.</p>
+<pre><span class=3D"linemarker-marked-line" style=3D"background-color: #FFF=
+F00; color: #000000;">swig -python hello.i</span>
+</pre>
+<p>This gives us the files `hello.py` and `hello_wrap.c`.</p>
+<p>The next step is compiling (substitute /usr/include/python2.4/ with the =
+correct path for your setup!).</p>
+<pre><span class=3D"linemarker-marked-line" style=3D"background-color: #FFF=
+F00; color: #000000;">gcc -fpic -c hellomodule.c hello_wrap.c -I/usr/includ=
+e/python2.4/</span>
+</pre>
+<p>Now linking and we are done!</p>
+<pre><span class=3D"linemarker-marked-line" style=3D"background-color: #FFF=
+F00; color: #000000;">gcc -shared hellomodule.o hello_wrap.o -o _hello.so
+</span></pre>
+<p>The module is used in the following way.</p>
+<pre>&gt;&gt;&gt; import hello
+&gt;&gt;&gt; hello.say_hello(&quot;World&quot;)
+Hello World!
+</pre>
+<div class=3D"noprint">
+<table style=3D"border: 1px solid black; width: 100%; border-spacing: 0px; =
+margin: 0.25em;">
+<tbody><tr>
+<td bgcolor=3D"#FFFFE0" width=3D"33%"><a href=3D"https://en.wikibooks.org/w=
+iki/Python_Programming/pyFormex" title=3D"Python Programming/pyFormex">Prev=
+ious: pyFormex</a></td>
+<td align=3D"center" bgcolor=3D"#FFFFE0" width=3D"33%"><a href=3D"https://e=
+n.wikibooks.org/wiki/Python_Programming" title=3D"Python Programming">Index=
+</a></td>
+<td align=3D"right" bgcolor=3D"#FFFFE0" width=3D"33%"><a href=3D"https://en=
+.wikibooks.org/wiki/Python_Programming/Extending_with_C%2B%2B" title=3D"Pyt=
+hon Programming/Extending with C++">Next: Extending with C++</a></td>
+</tr>
+</tbody></table>
+</div>
+
+
+<!--=20
+NewPP limit report
+Parsed by mw1028
+CPU time usage: 0.097 seconds
+Real time usage: 0.129 seconds
+Preprocessor visited node count: 174/1000000
+Preprocessor generated node count: 0/1500000
+Post=E2=80=90expand include size: 1406/2097152 bytes
+Template argument size: 108/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+-->
+
+<!--=20
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   97.440      1 - -total
+ 34.51%   33.631      2 - Template:Python_Programming/Navigation
+  8.80%    8.575      2 - Template:BookCat
+  3.43%    3.344      2 - Template:FULLBOOKNAME
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:72222-0!*!0!!=
+en!*!* and timestamp 20150509060703 and revision id 2722898
+ -->
+</div>									<div class=3D"printfooter">
+						Retrieved from &quot;<a dir=3D"ltr" href=3D"http://en.wikibooks.org/w=
+/index.php?title=3DPython_Programming/Extending_with_C&amp;oldid=3D2722898"=
+>http://en.wikibooks.org/w/index.php?title=3DPython_Programming/Extending_w=
+ith_C&amp;oldid=3D2722898</a>&quot;					</div>
+													<div class=3D"catlinks" id=3D"catlinks"><div class=3D"mw-norma=
+l-catlinks" id=3D"mw-normal-catlinks"><a href=3D"https://en.wikibooks.org/w=
+iki/Special:Categories" title=3D"Special:Categories">Category</a>: <ul><li>=
+<a href=3D"https://en.wikibooks.org/wiki/Category:Python_Programming" title=
+=3D"Category:Python Programming">Python Programming</a></li></ul></div></di=
+v>												<div class=3D"visualClear"></div>
+							</div>
+		</div>
+		<div id=3D"mw-navigation">
+			<h2>Navigation menu</h2>
+
+		=09
+		=09
+		</div>
+	=09
+	=09
+
+
+
+
+<div class=3D"suggestions" style=3D"display: none; font-size: 13px;"><div c=
+lass=3D"suggestions-results"></div><div class=3D"suggestions-special"></div=
+></div>
+
+=09
+
+
+
+</body></html>
+------=_Part_3507F544_E13E9FCC.14DC3DDDDAC
+Content-Location: file:///home/mahmood/.mozilla/firefox/ctg6ogbg.default/ScrapBook/data/20150605174535/index.css
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/css
+
+/* ::::: https://en.wikibooks.org/w/load.php?debug=3Dfalse&lang=3Den&module=
+s=3Dext.flaggedRevs.basic%7Cext.geshi.language.bash%2Cc%2Cpython%7Cext.gesh=
+i.local%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wik=
+ihiero%2CwikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawik=
+i.sectionAnchor%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskin=
+s.vector.styles%7Cwikibase.client.init&only=3Dstyles&skin=3Dvector&* ::::: =
+*/
+
+.source-bash { line-height: normal; }
+.source-bash li, .source-bash pre { line-height: normal; border: 0px none w=
+hite; }
+.bash.source-bash .de1, .bash.source-bash .de2 { font: 1em/1.2em monospace,=
+monospace; margin: 0px; padding: 0px; background: transparent none repeat s=
+croll 0% 0%; vertical-align: top; }
+.bash.source-bash { font-family: monospace,monospace; }
+.bash.source-bash .kw2 { color: rgb(194, 12, 185); font-weight: bold; }
+.bash.source-bash .co4 { color: rgb(102, 102, 102); }
+.source-c { line-height: normal; }
+.source-c li, .source-c pre { line-height: normal; border: 0px none white; }
+.c.source-c .de1, .c.source-c .de2 { font: 1em/1.2em monospace,monospace; m=
+argin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%;=
+ vertical-align: top; }
+.c.source-c { font-family: monospace,monospace; }
+.c.source-c .kw1 { color: rgb(177, 177, 0); }
+.c.source-c .kw2 { color: rgb(0, 0, 0); font-weight: bold; }
+.c.source-c .kw3 { color: rgb(0, 0, 102); }
+.c.source-c .kw4 { color: rgb(153, 51, 51); }
+.c.source-c .co2 { color: rgb(51, 153, 51); }
+.c.source-c .coMULTI { color: rgb(128, 128, 128); font-style: italic; }
+.c.source-c .es1 { color: rgb(0, 0, 153); font-weight: bold; }
+.c.source-c .br0 { color: rgb(0, 153, 0); }
+.c.source-c .sy0 { color: rgb(51, 153, 51); }
+.c.source-c .st0 { color: rgb(255, 0, 0); }
+.c.source-c .nu0 { color: rgb(0, 0, 221); }
+.source-python { line-height: normal; }
+.source-python li, .source-python pre { line-height: normal; border: 0px no=
+ne white; }
+.python.source-python .de1, .python.source-python .de2 { font: 1em/1.2em mo=
+nospace,monospace; margin: 0px; padding: 0px; background: transparent none =
+repeat scroll 0% 0%; vertical-align: top; }
+.python.source-python { font-family: monospace,monospace; }
+.python.source-python .kw1 { color: rgb(255, 119, 0); font-weight: bold; }
+.python.source-python .kw3 { color: rgb(220, 20, 60); }
+.python.source-python .br0 { color: black; }
+.python.source-python .sy0 { color: rgb(102, 204, 102); }
+.python.source-python .st0 { color: rgb(72, 61, 139); }
+.python.source-python .me1 { color: black; }
+body.skin-vector div.mw-geshi, body.skin-monobook div.mw-geshi, body.skin-c=
+hick div.mw-geshi { padding: 1em; border: 1px dashed rgb(47, 111, 171); col=
+or: black; background-color: rgb(249, 249, 249); line-height: 1.1em; }
+.mw-geshi, .mw-geshi div, .mw-geshi pre, .source-css, .source-javascript { =
+font-family: monospace,"Courier New" ! important; }
+.client-js .mw-content-ltr .mw-editsection-bracket:first-of-type, .client-j=
+s .mw-content-rtl .mw-editsection-bracket:not(:first-of-type) { margin-righ=
+t: 0.25em; color: rgb(85, 85, 85); }
+.client-js .mw-content-rtl .mw-editsection-bracket:first-of-type, .client-j=
+s .mw-content-ltr .mw-editsection-bracket:not(:first-of-type) { margin-left=
+: 0.25em; color: rgb(85, 85, 85); }
+.client-js.ve-not-available .mw-content-ltr .mw-editsection-bracket, .clien=
+t-js.ve-not-available .mw-content-rtl .mw-editsection-bracket { margin-left=
+: 0px; margin-right: 0px; }
+@media screen {
+	.mw-content-ltr { direction: ltr; }
+	.sitedir-ltr textarea, .sitedir-ltr input { direction: ltr; }
+	input[type=3D"submit"], input[type=3D"button"], input[type=3D"reset"], inp=
+ut[type=3D"file"] { direction: ltr; }
+	.mw-icon-question:lang(ar), .mw-icon-question:lang(fa), .mw-icon-question:=
+lang(ur) { transform: scaleX(-1); }
+	#catlinks { text-align: left; }
+	.catlinks ul { display: inline; margin: 0px; padding: 0px; list-style: out=
+side none none; }
+	.catlinks li { display: inline-block; line-height: 1.25em; border-left: 1p=
+x solid rgb(170, 170, 170); margin: 0.125em 0px; padding: 0px 0.5em; }
+	.catlinks li:first-child { padding-left: 0.25em; border-left: medium none;=
+ }
+	a.new { color: rgb(186, 0, 0); }
+	.visualClear { clear: both; }
+	.mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul { margin: 0.3em 0px=
+ 0px 1.6em; padding: 0px; }
+	h1:lang(anp), h1:lang(as), h1:lang(bh), h1:lang(bho), h1:lang(bn), h1:lang=
+(gu), h1:lang(hi), h1:lang(kn), h1:lang(ks), h1:lang(ml), h1:lang(mr), h1:l=
+ang(my), h1:lang(mai), h1:lang(ne), h1:lang(new), h1:lang(or), h1:lang(pa),=
+ h1:lang(pi), h1:lang(sa), h1:lang(ta), h1:lang(te) { line-height: 1.6em ! =
+important; }
+	h2:lang(anp), h3:lang(anp), h4:lang(anp), h5:lang(anp), h6:lang(anp), h2:l=
+ang(as), h3:lang(as), h4:lang(as), h5:lang(as), h6:lang(as), h2:lang(bho), =
+h3:lang(bho), h4:lang(bho), h5:lang(bho), h6:lang(bho), h2:lang(bh), h3:lan=
+g(bh), h4:lang(bh), h5:lang(bh), h6:lang(bh), h2:lang(bn), h3:lang(bn), h4:=
+lang(bn), h5:lang(bn), h6:lang(bn), h2:lang(gu), h3:lang(gu), h4:lang(gu), =
+h5:lang(gu), h6:lang(gu), h2:lang(hi), h3:lang(hi), h4:lang(hi), h5:lang(hi=
+), h6:lang(hi), h2:lang(kn), h3:lang(kn), h4:lang(kn), h5:lang(kn), h6:lang=
+(kn), h2:lang(ks), h3:lang(ks), h4:lang(ks), h5:lang(ks), h6:lang(ks), h2:l=
+ang(ml), h3:lang(ml), h4:lang(ml), h5:lang(ml), h6:lang(ml), h2:lang(mr), h=
+3:lang(mr), h4:lang(mr), h5:lang(mr), h6:lang(mr), h2:lang(my), h3:lang(my)=
+, h4:lang(my), h5:lang(my), h6:lang(my), h2:lang(mai), h3:lang(mai), h4:lan=
+g(mai), h5:lang(mai), h6:lang(mai), h2:lang(ne), h3:lang(ne), h4:lang(ne), =
+h5:lang(ne), h6:lang(ne), h2:lang(new), h3:lang(new), h4:lang(new), h5:lang=
+(new), h6:lang(new), h2:lang(or), h3:lang(or), h4:lang(or), h5:lang(or), h6=
+:lang(or), h2:lang(pa), h3:lang(pa), h4:lang(pa), h5:lang(pa), h6:lang(pa),=
+ h2:lang(pi), h3:lang(pi), h4:lang(pi), h5:lang(pi), h6:lang(pi), h2:lang(s=
+a), h3:lang(sa), h4:lang(sa), h5:lang(sa), h6:lang(sa), h2:lang(ta), h3:lan=
+g(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), h2:lang(te), h3:lang(te), h4:=
+lang(te), h5:lang(te), h6:lang(te) { line-height: 1.2em; }
+	ol:lang(bcc) li, ol:lang(bgn) li, ol:lang(bqi) li, ol:lang(fa) li, ol:lang=
+(glk) li, ol:lang(kk-arab) li, ol:lang(lrc) li, ol:lang(mzn) li, ol:lang(sd=
+h) li { list-style-type: persian; }
+	ol:lang(ckb) li { list-style-type: arabic-indic; }
+	ol:lang(hi) li, ol:lang(mr) li { list-style-type: devanagari; }
+	ol:lang(as) li, ol:lang(bn) li { list-style-type: bengali; }
+	ol:lang(or) li { list-style-type: oriya; }
+	#toc ul, .toc ul { margin: 0.3em 0px; }
+	.mw-content-ltr .toc ul, .mw-content-ltr #toc ul, .mw-content-rtl .mw-cont=
+ent-ltr .toc ul, .mw-content-rtl .mw-content-ltr #toc ul { text-align: left=
+; }
+	.mw-content-ltr .toc ul ul, .mw-content-ltr #toc ul ul, .mw-content-rtl .m=
+w-content-ltr .toc ul ul, .mw-content-rtl .mw-content-ltr #toc ul ul { marg=
+in: 0px 0px 0px 2em; }
+	#toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle { direction=
+: ltr; }
+	.mw-jump, #jump-to-nav { overflow: hidden; height: 0px; }
+	.printfooter { display: none; }
+	.mw-editsection, .toctoggle, .tochidden, #jump-to-nav { -moz-user-select: =
+none; }
+	.mw-editsection, .mw-editsection-like { font-size: small; font-weight: nor=
+mal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display:=
+ inline-block; }
+	.mw-content-ltr .mw-editsection, .mw-content-rtl .mw-content-ltr .mw-edits=
+ection { margin-left: 1em; }
+}
+@media screen {
+}
+@media screen and (min-width: 982px) {
+}
+@media screen {
+	a { text-decoration: none; color: rgb(6, 69, 173); background: transparent=
+ none repeat scroll 0% 0%; }
+	a:visited { color: rgb(11, 0, 128); }
+	a:active { color: rgb(250, 167, 0); }
+	a:hover, a:focus { text-decoration: underline; }
+	a.new, #p-personal a.new { color: rgb(186, 0, 0); }
+	a.new:visited, #p-personal a.new:visited { color: rgb(165, 88, 88); }
+	.mw-body a.extiw, .mw-body a.extiw:active { color: rgb(51, 102, 187); }
+	.mw-body a.extiw:visited { color: rgb(102, 51, 102); }
+	.mw-body a.extiw:active { color: rgb(187, 102, 51); }
+	.mw-body a.external { color: rgb(51, 102, 187); }
+	.mw-body a.external:visited { color: rgb(102, 51, 102); }
+	.mw-body a.external:active { color: rgb(187, 102, 51); }
+	img { border: medium none; vertical-align: middle; }
+	h1, h2, h3, h4, h5, h6 { color: black; background: transparent none repeat=
+ scroll 0% 0%; font-weight: normal; margin: 0px; overflow: hidden; padding-=
+top: 0.5em; padding-bottom: 0.17em; border-bottom: 1px solid rgb(170, 170, =
+170); }
+	h1 { font-size: 188%; }
+	h2 { font-size: 150%; }
+	h3, h4, h5, h6 { border-bottom: medium none; font-weight: bold; }
+	h3 { font-size: 128%; }
+	h4 { font-size: 116%; }
+	h1, h2 { margin-bottom: 0.6em; }
+	h3, h4, h5 { margin-bottom: 0.3em; }
+	p { margin: 0.4em 0px 0.5em; }
+	ul { list-style-type: square; margin: 0.3em 0px 0px 1.6em; padding: 0px; }
+	li { margin-bottom: 0.1em; }
+	pre, code, tt, kbd, samp, .mw-code { font-family: monospace,Courier; }
+	code { color: black; background-color: rgb(249, 249, 249); border: 1px sol=
+id rgb(221, 221, 221); border-radius: 2px; padding: 1px 4px; }
+	pre, .mw-code { color: black; background-color: rgb(249, 249, 249); border=
+: 1px solid rgb(221, 221, 221); padding: 1em; }
+	table { font-size: 100%; }
+	form { border: medium none; margin: 0px; }
+	#toc, .toc, .mw-warning, .toccolours { border: 1px solid rgb(170, 170, 170=
+); background-color: rgb(249, 249, 249); padding: 5px; font-size: 95%; }
+	#toc, .toc { display: table; padding: 7px; }
+	#toc h2, .toc h2 { display: inline; border: medium none; padding: 0px; fon=
+t-size: 100%; font-weight: bold; }
+	#toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle { text-alig=
+n: center; }
+	#toc ul, .toc ul { list-style-type: none; list-style-image: none; margin-l=
+eft: 0px; padding: 0px; text-align: left; }
+	#toc ul ul, .toc ul ul { margin: 0px 0px 0px 2em; }
+	#toc .toctoggle, .toc .toctoggle { font-size: 94%; }
+	.catlinks { border: 1px solid rgb(170, 170, 170); background-color: rgb(24=
+9, 249, 249); padding: 5px; margin-top: 1em; clear: both; }
+	#siteNotice { position: relative; text-align: center; margin: 0px; }
+	.firstHeading { margin-bottom: 0.1em; line-height: 1.2em; padding-bottom: =
+0px; }
+	#siteSub { display: none; }
+	#jump-to-nav { margin-top: -1.4em; margin-bottom: 1.4em; }
+	#contentSub, #contentSub2 { font-size: 84%; line-height: 1.2em; margin: 0p=
+x 0px 1.4em 1em; color: rgb(84, 84, 84); width: auto; }
+	span.subpages { display: block; }
+}
+.mw-wiki-logo { background-image: url('enwikibooks.png'); }
+.mw-ui-button:focus::-moz-focus-inner { border-color: transparent; }
+.mw-ui-button.mw-ui-progressive:focus::-moz-focus-inner, .mw-ui-button.mw-u=
+i-primary:focus::-moz-focus-inner { border-color: transparent; }
+.mw-ui-button.mw-ui-constructive:focus::-moz-focus-inner { border-color: tr=
+ansparent; }
+.mw-ui-button.mw-ui-destructive:focus::-moz-focus-inner { border-color: tra=
+nsparent; }
+.mw-ui-button-group > :first-child { border-top-left-radius: 2px; border-bo=
+ttom-left-radius: 2px; }
+.mw-ui-button-group > :not(:first-child) { border-left: medium none; }
+.mw-ui-button-group > :last-child { border-top-right-radius: 2px; border-bo=
+ttom-right-radius: 2px; }
+@media screen {
+	html { font-size: 100%; }
+	html, body { height: 100%; margin: 0px; padding: 0px; font-family: sans-se=
+rif; }
+	body { background-color: rgb(246, 246, 246); }
+	.mw-body { margin-left: 10em; padding: 1em; border-width: 1px 0px 1px 1px;=
+ border-style: solid; border-color: rgb(167, 215, 249); -moz-border-top-col=
+ors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none;=
+ -moz-border-left-colors: none; border-image: none; margin-top: -1px; backg=
+round-color: rgb(255, 255, 255); color: rgb(37, 37, 37); direction: ltr; }
+	.mw-body .mw-editsection, .mw-body .mw-editsection-like { font-family: san=
+s-serif; }
+	.mw-body p { line-height: inherit; margin: 0.5em 0px; }
+	.mw-body h1, .mw-body h2 { font-family: "Linux Libertine",Georgia,Times,se=
+rif; line-height: 1.3; margin-bottom: 0.25em; padding: 0px; }
+	.mw-body h1 { font-size: 1.8em; }
+	.mw-body h2 { font-size: 1.5em; margin-top: 1em; }
+	.mw-body h3, .mw-body h4, .mw-body h5, .mw-body h6 { line-height: 1.6; mar=
+gin-top: 0.3em; margin-bottom: 0px; padding-bottom: 0px; }
+	.mw-body h3 { font-size: 1.2em; }
+	.mw-body h3, .mw-body h4 { font-weight: bold; }
+	.mw-body h4, .mw-body h5, .mw-body h6 { font-size: 100%; }
+	.mw-body #toc h2, .mw-body .toc h2 { font-size: 100%; font-family: sans-se=
+rif; }
+	.mw-body .firstHeading { overflow: visible; }
+	.mw-body .mw-indicators { float: right; line-height: 1.6; font-size: 0.875=
+em; position: relative; z-index: 1; }
+	div.emptyPortlet { display: none; }
+	ul { list-style-type: disc; list-style-image: url('undefined'); }
+	pre, .mw-code { line-height: 1.3em; }
+	#siteNotice { font-size: 0.8em; }
+	.mw-body-content { position: relative; line-height: 1.6; font-size: 0.875e=
+m; z-index: 0; }
+	#p-personal { position: absolute; top: 0.33em; right: 0.75em; z-index: 100=
+; }
+	#p-personal h3 { display: none; }
+	#p-personal ul { list-style-type: none; list-style-image: none; margin: 0p=
+x; padding-left: 10em; }
+	#p-personal li { line-height: 1.125em; float: left; margin-left: 0.75em; m=
+argin-top: 0.5em; font-size: 0.75em; white-space: nowrap; }
+	#p-search { float: left; margin-right: 0.5em; margin-left: 0.5em; }
+	#p-search h3 { display: none; }
+	#p-search form, #p-search input { margin: 0.4em 0px 0px; }
+	div#simpleSearch { display: block; width: 12.6em; padding-right: 1.4em; he=
+ight: 1.4em; margin-top: 0.65em; position: relative; min-height: 1px; borde=
+r: 1px solid rgb(170, 170, 170); color: black; background-color: white; bac=
+kground-image: url('undefined'); background-position: left top; background-=
+repeat: repeat-x; }
+	div#simpleSearch input { margin: 0px; padding: 0px; border: 0px none; back=
+ground-color: transparent; color: black; }
+	div#simpleSearch #searchInput { width: 100%; padding: 0.2em 0px 0.2em 0.2e=
+m; font-size: 13px; direction: ltr; }
+	div#simpleSearch #searchInput:focus { outline: medium none; }
+	div#simpleSearch #searchInput:-moz-placeholder { color: rgb(153, 153, 153)=
+; }
+	div#simpleSearch #searchButton, div#simpleSearch #mw-searchButton { positi=
+on: absolute; top: 0px; right: 0px; width: 1.65em; height: 100%; cursor: po=
+inter; text-indent: -99999px; line-height: 1; direction: ltr; white-space: =
+nowrap; overflow: hidden; background-image: linear-gradient(transparent, tr=
+ansparent), url('undefined'); background-position: center center; backgroun=
+d-repeat: no-repeat; }
+	div.vectorTabs h3 { display: none; }
+	div.vectorTabs { float: left; height: 2.5em; background-image: url('undefi=
+ned'); background-position: left bottom; background-repeat: no-repeat; padd=
+ing-left: 1px; }
+	div.vectorTabs ul { float: left; height: 100%; list-style-type: none; list=
+-style-image: none; margin: 0px; padding: 0px; background-image: url('undef=
+ined'); background-position: right bottom; background-repeat: no-repeat; }
+	div.vectorTabs ul li { float: left; line-height: 1.125em; display: inline-=
+block; height: 100%; margin: 0px; padding: 0px; background-color: rgb(243, =
+243, 243); background-image: url('undefined'); background-position: left bo=
+ttom; background-repeat: repeat-x; white-space: nowrap; }
+	div.vectorTabs ul > li { display: block; }
+	div.vectorTabs li {  }
+	div.vectorTabs li.selected { background-image: url('undefined'); }
+	div.vectorTabs li.selected a, div.vectorTabs li.selected a:visited { color=
+: rgb(51, 51, 51); text-decoration: none; }
+	div.vectorTabs li a { display: inline-block; height: 1.9em; padding-left: =
+0.5em; padding-right: 0.5em; color: rgb(6, 69, 173); cursor: pointer; font-=
+size: 0.8em; }
+	div.vectorTabs span { display: inline-block; background-image: url('undefi=
+ned'); background-position: right bottom; background-repeat: no-repeat; }
+	div.vectorTabs span a { display: inline-block; padding-top: 1.25em; }
+	div.vectorTabs span > a { float: left; display: block; }
+	div.vectorMenu { direction: ltr; float: left; cursor: pointer; position: r=
+elative; }
+	div#mw-head div.vectorMenu h3 { float: left; background-image: url('undefi=
+ned'); background-repeat: no-repeat; background-position: right bottom; fon=
+t-size: 1em; height: 2.5em; padding-right: 1px; margin-right: -1px; }
+	div.vectorMenu h3 span { display: block; font-size: 0.8em; padding-left: 0=
+.7em; padding-top: 1.375em; margin-right: 20px; font-weight: normal; color:=
+ rgb(77, 77, 77); }
+	div.vectorMenu h3 a { position: absolute; top: 0px; right: 0px; width: 20p=
+x; height: 2.5em; background-image: linear-gradient(transparent, transparen=
+t), url('undefined'); background-position: 100% 70%; background-repeat: no-=
+repeat; transition: background-position 250ms ease 0s; }
+	div.vectorMenu div.menu { min-width: 100%; position: absolute; top: 2.5em;=
+ left: -1px; background-color: white; border-width: 0px 1px 1px; border-sty=
+le: solid; border-color: silver; -moz-border-top-colors: none; -moz-border-=
+right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-color=
+s: none; border-image: none; clear: both; text-align: left; display: none; }
+	div.vectorMenu:hover div.menu, div.vectorMenu.menuForceShow div.menu { dis=
+play: block; }
+	div.vectorMenu ul { list-style-type: none; list-style-image: none; padding=
+: 0px; margin: 0px; text-align: left; }
+	div.vectorMenu ul, x:-moz-any-link { min-width: 5em; }
+	div.vectorMenu ul, x:-moz-any-link, x:default { min-width: 0px; }
+	@keyframes rotate {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+	@keyframes rotate {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+	#mw-navigation h2 { position: absolute; top: -9999px; }
+	#mw-page-base { height: 5em; background-position: left bottom; background-=
+repeat: repeat-x; background-image: linear-gradient(rgb(255, 255, 255) 50%,=
+ rgb(246, 246, 246) 100%); background-color: rgb(255, 255, 255); }
+	#mw-head-base { margin-top: -5em; margin-left: 10em; height: 5em; }
+	div#mw-head { position: absolute; top: 0px; right: 0px; width: 100%; }
+	div#mw-head h3 { margin: 0px; padding: 0px; }
+	#left-navigation { float: left; margin-left: 10em; margin-top: 2.5em; marg=
+in-bottom: -2.5em; display: inline; }
+	#right-navigation { float: right; margin-top: 2.5em; }
+	#p-logo { position: absolute; top: -160px; left: 0px; width: 10em; height:=
+ 160px; }
+	#p-logo a { display: block; width: 10em; height: 160px; background-repeat:=
+ no-repeat; background-position: center center; text-decoration: none; }
+	div#mw-panel { font-size: inherit; position: absolute; top: 160px; padding=
+-top: 1em; width: 10em; left: 0px; }
+	div#mw-panel div.portal { margin: 0px 0.6em 0px 0.7em; padding: 0.25em 0px=
+; direction: ltr; background-position: left top; background-repeat: no-repe=
+at; background-image: url('undefined'); }
+	div#mw-panel div.portal h3 { font-size: 0.75em; color: rgb(77, 77, 77); fo=
+nt-weight: normal; margin: 0px; padding: 0.25em 0px 0.25em 0.25em; cursor: =
+default; border: medium none; }
+	div#mw-panel div.portal div.body { margin: 0px 0px 0px 1.25em; padding-top=
+: 0px; }
+	div#mw-panel div.portal div.body ul { list-style-type: none; list-style-im=
+age: none; margin: 0px; padding: 0px; }
+	div#mw-panel div.portal div.body ul li { line-height: 1.125em; margin: 0px=
+; padding: 0.25em 0px; font-size: 0.75em; word-wrap: break-word; }
+	div#mw-panel div.portal div.body ul li a { color: rgb(6, 69, 173); }
+	div#mw-panel div.portal div.body ul li a:visited { color: rgb(11, 0, 128);=
+ }
+	div#mw-panel #p-logo + div.portal { background-image: none; margin-top: 0p=
+x; }
+	div#mw-panel #p-logo + div.portal h3 { display: none; }
+	div#mw-panel #p-logo + div.portal div.body { margin-left: 0.5em; }
+	div#footer { margin-left: 10em; margin-top: 0px; padding: 0.75em; directio=
+n: ltr; }
+	div#footer ul { list-style-type: none; list-style-image: none; margin: 0px=
+; padding: 0px; }
+	div#footer ul li { margin: 0px; padding: 0.5em 0px; color: rgb(51, 51, 51)=
+; font-size: 0.7em; }
+	div#footer #footer-icons { float: right; }
+	div#footer #footer-icons li { float: left; margin-left: 0.5em; line-height=
+: 2em; text-align: right; }
+	div#footer #footer-info li { line-height: 1.4em; }
+	div#footer #footer-places li { float: left; margin-right: 1em; line-height=
+: 2em; }
+	body.ltr div#footer #footer-places { float: left; }
+	.mw-body .external { background-position: right center; background-repeat:=
+ no-repeat; background-image: linear-gradient(transparent, transparent), ur=
+l('undefined'); padding-right: 13px; }
+}
+@media screen and (min-width: 982px) {
+	.mw-body { margin-left: 11em; padding: 1.25em 1.5em 1.5em; }
+	#p-logo { left: 0.5em; }
+	div#footer { margin-left: 11em; padding: 1.25em; }
+	#mw-panel { padding-left: 0.5em; }
+	#p-search { margin-right: 1em; }
+	#left-navigation { margin-left: 11em; }
+	#p-personal { right: 1em; }
+	#mw-head-base { margin-left: 11em; }
+}
+.wb-langlinks-link { line-height: 1.125em; font-size: 0.75em; float: right;=
+ }
+.wb-langlinks-link { list-style: outside none none; text-align: right; padd=
+ing-right: 0.5em ! important; }
+.wb-langlinks-link > a { padding-left: 11px; background: transparent none n=
+o-repeat scroll left center; }
+.wb-langlinks-link > a:link, .wb-langlinks-link > a:visited { background-im=
+age: url('undefined'); color: rgb(121, 121, 121) ! important; }
+.wb-langlinks-link > a:hover { background-image: url('undefined'); color: r=
+gb(6, 69, 173) ! important; }
+div.after-portlet-lang::after { content: ""; clear: both; display: block; }
+.ve-activated #toc, .ve-activated #siteNotice, .ve-activated .mw-indicators=
+, .ve-active #bodyContent > :not(#siteSub):not(#contentSub):not(.ve-ui-mwTo=
+cWidget), .ve-activated #t-print, .ve-activated #t-permalink, .ve-activated=
+ #p-coll-print_export, .ve-activated #t-cite, .ve-activating .ve-ui-surface=
+, .ve-deactivating .ve-ui-surface { display: none; }
+.mw-editsection { white-space: nowrap; unicode-bidi: -moz-isolate; }
+#p-lang .uls-settings-trigger { background-color: transparent; background-r=
+epeat: no-repeat; background-attachment: scroll; background-position: right=
+ top; background-clip: border-box; background-origin: padding-box; backgrou=
+nd-size: auto auto; background-image: linear-gradient(transparent, transpar=
+ent), url('undefined'); height: 16px; width: 14px; float: right; cursor: po=
+inter; }
+.skin-vector #p-lang .uls-settings-trigger { margin-top: 3px; }
+#p-lang .uls-settings-trigger:hover { background-position: right -16px; }
+.suggestions { overflow: hidden; position: absolute; top: 0px; left: 0px; w=
+idth: 0px; border: medium none; z-index: 1099; padding: 0px; margin: -1px 0=
+px 0px; }
+.suggestions-special { position: relative; background-color: white; cursor:=
+ pointer; border: 1px solid rgb(170, 170, 170); margin: -2px 0px 0px; displ=
+ay: none; padding: 0.25em; line-height: 1.25em; }
+.suggestions-results { background-color: white; cursor: pointer; border: 1p=
+x solid rgb(170, 170, 170); padding: 0px; margin: 0px; }
+/* ::::: https://en.wikibooks.org/w/load.php?debug=3Dfalse&lang=3Den&module=
+s=3Dsite&only=3Dstyles&skin=3Dvector&* ::::: */
+
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Autocount.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+body { counter-reset: autocount-1 autocount-2 autocount-3; }
+.autocount::before, .autocount-list ol li::before { counter-increment: auto=
+count-1; content: counter(autocount-1, decimal) " "; color: green; }
+.autocount-reset::before { counter-reset: autocount-1; }
+.autocount .autocount::before, .autocount-list li ol li::before { counter-i=
+ncrement: autocount-2; content: counter(autocount-1, decimal) "." counter(a=
+utocount-2, decimal) " "; color: red; }
+.autocount .autocount .autocount::before, .autocount-list li li ol li::befo=
+re { counter-increment: autocount-3; content: counter(autocount-1, decimal)=
+ "." counter(autocount-2, decimal) "." counter(autocount-3, decimal) " "; c=
+olor: green; }
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Hoverbox.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Infobox.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Lists.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+.hlist dt::after { content: ":"; }
+.hlist dd::after, .hlist li::after { content: " =C2=B7"; font-weight: bold;=
+ }
+.hlist dd:last-child::after, .hlist dt:last-child::after, .hlist li:last-ch=
+ild::after { content: none; }
+.hlist dd.hlist-last-child::after, .hlist dt.hlist-last-child::after, .hlis=
+t li.hlist-last-child::after { content: none; }
+.hlist dl dl dd:first-child::before, .hlist ol ol li:first-child::before, .=
+hlist ul ul li:first-child::before { content: "("; }
+.hlist dl dl dd:last-child::after, .hlist ol ol li:last-child::after, .hlis=
+t ul ul li:last-child::after { content: ")"; font-weight: normal; }
+.hlist dl dl dd.hlist-last-child::after, .hlist ol ol li.hlist-last-child::=
+after, .hlist ul ul li.hlist-last-child::after { content: ")"; font-weight:=
+ normal; }
+.hlist.hnum ol li::before { content: counter(level1, decimal) " "; }
+.hlist.hnum ol ol li:first-child::before { content: "(\" counter(level2, de=
+cimal) \" "; }
+.hlist.hnum ol ol li::before { content: counter(level2, decimal) " "; }
+@media screen, handheld {
+}
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Messages.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Media.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Multilingual.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Nav.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+.collapsible { margin: 0px; padding: 0px; }
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+search.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+.mw-search-results li:nth-child(2n+1) { background: rgb(246, 248, 252) none=
+ repeat scroll 0% 0%; }
+.mw-search-results li:nth-child(2n) { background: rgb(252, 252, 252) none r=
+epeat scroll 0% 0%; }
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+toc.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+top.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Slideshows.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+body #siteSub { display: none; }
+@media screen, projection, handheld {
+}
+@media only screen and (max-device-width: 480px) {
+	body {  }
+}
+#catlinks li { padding: 0px 0.3em; margin: 0px; }
+#catlinks li:first-child { padding-left: 0px; }
+.vectorTabs .collapsible { border: medium none; clear: none; }
+a:lang(ar), a:lang(kk-arab), a:lang(mzn), a:lang(ps), a:lang(ur) { text-dec=
+oration: none; }
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Common.css/=
+Python_Programming&action=3Draw&ctype=3Dtext/css ::::: */
+
+/* ::::: https://en.wikibooks.org/w/index.php?title=3DMediaWiki:Perbook/Pyt=
+hon_Programming.css&action=3Draw&ctype=3Dtext/css ::::: */
+
+/* ::::: https://en.wikibooks.org/w/load.php?debug=3Dfalse&lang=3Den&module=
+s=3Dext.gadget.extlinks&only=3Dstyles&skin=3Dvector&* ::::: */
+
+
+------=_Part_3507F544_E13E9FCC.14DC3DDDDAC
+Content-Location: file:///home/mahmood/.mozilla/firefox/ctg6ogbg.default/ScrapBook/data/20150605174535/wikibooks.ico
+Content-Transfer-Encoding: base64
+Content-Type: image/x-icon
+
+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
++//6////7+Xe+96cXv/SlFvS2J12DQAAAACv3umCvO36/6/d6fuv3en/r93p/6/d6f+v3en/r93p
+/6/d6f+u3Oj/suLu/6XN1/9YST//NQAA/7LBxP/d9fv/1uzy/9fu9P/Z8fj/u66m/5QhAP+8nYv/
+9/v8//n9///3+/z/+Pz9//r///7ixrL+3ZVL/9SaZYgAAAAAAAAAAK/d6bm87fr/r93p+q/e6f+v
+3en/r93p/6/d6f+v3en/r93p/6/d6P+y4u7/jqqw/ysAAP9sZWD/zeHm/9vz+f/V6/D/2fP6/9Hi
+5f+pfGD/lzcA/9vRy//8////9/v8//f7+//6////9PTz/dypgP/Rj1D51p9yOAAAAACx4usar93q
+47fn8/+v3en8r93p/6/d6f+v3en/r93p/6/d6f+v3Oj/sd/r/6zZ5P9scXD/IQAA/5qjpP/a8vj/
+1+70/9bt8v/a9Pr/xMTB/5g7AP+tf2L/8fHw//v////3+/z/9/v7//r////r3dL83plX/9KUW8EA
+AAAAAAAAAK3a5j6v3en/suDs/6/e6f2v3en/r93p/6/d6f+v3en/r93p/67c6P+z4+//m77H/0QA
+AP9PLQr/vc/T/931/P/V6/D/2PD3/9bs8f+yl4j/khEA/8y6sP/7////+P3+//f7+//4/f7/+f7/
+/t+8o/7blEr/1ZtobgAAAAC/gEAErt7oZbnp9f+v3en+r93o/6/d6f+v3en/r93p/6/d6f+v3en/
+r93p/7Hg7P9+j5L/JQAA/35+fP/U6vD/2fH3/9Xr8f/a8/r/zNbX/59aAP+hYSP/5+Lg//z////3
++/z/9/r7//r////x7en93KJy/9KQUezYqoMhAAAAAKqqVQOu3umLvO36/6/d6fyv3en/r93p/6/d
+6f+v3en/r93p/67c5/+y4u7/pc7Y/1lLQv81AAD/qbW3/931/P/V7PL/1+70/9nx+P+8sKj/kxIA
+/72fj//3+vr/+v7///f6+//4+/z/+v///+fRxPvgl03/05dipAAAAAAAAAAA////Aa/d6ay77Pn/
+r93p+6/d6f+v3en/r93p/6/d6f+v3en/rtzn/7Tk8P+Nqa//OAAA/2BRR//J3eH/3PT6/9Xr8f/Z
+8fj/0uTo/6d4Wf+ZQgD/2s/J//3////3+/z/9/v7//n////2+Pj+3LCQ/9eRSf/VoHJOAAAAAKqq
+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
+6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+u2+b/tOTx/5Cutf9EAAD/VDwt
+/z4AAP+9zdH/3PT6/9bs8v/X7vT/1+70/9fu9P/X7vT/1+7z/66Nef+fWAD/m1IA/7qYhf/5/v//
++Pz9//j8/f/4/P3/+Pz9//j7/P/4/f7/9/r6/9mqhf/Rj1D936Bo/9SXYFj///8BAAAAAJnMzAWv
+3enYt+fz/6/e6fyv3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d
+6f+u3Of/s+Pv/5S0vP9FAAD/Uzoq/z8AAP+5yc3/3PT7/9bs8v/X7vT/1+70/9bt8//Z8vn/z9ze
+/6JlMP+jZjT/mEYA/9PDuv/9////9/r7//j8/f/4/P3/+Pz9//f7+//6////7uXe/9KQUv3Zm2P/
+1Jdg5syZZg+q//8DAAAAAK/c5jOw3ur/sN7q/6/d6f6v3en/r93p/6/d6f+v3en/r93p/6/d6f+v
+3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/seDs/3SAgv9IAAD/Rx8A/2leV//T6O7/2fD2/9bt
+8//X7vT/1+70/9bt8v/a9Pv/vbSt/51NAP+hZDD/o2Yw/+3s6v/7////9/v8//j8/f/4/P3/+Pz9
+//j7/P/6////48ay/8+LQvvjo2v/05VenQAAAAC/v78EAAAAALDe6XS77Pj/r93p/K/d6f+v3en/
+r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/67c6P+y4u7/o8rU/08tB/9T
+OCX/NwAA/52np//d9fv/1uzy/9fu9P/X7vT/1+3z/9jw9v/V6e7/qXxf/6FeGf+aUAD/waWV//v/
+///4/P3/+Pz9//j8/f/4/P3/+Pv8//n+///19vX/1qJ3/9KSVf7anGX/1pZeRAAAAAD///8BAAAA
+AK/d6LO66/f/r9zp+6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/
+r93p/67b5/+05PD/h5+k/0EAAP9SOin/TCUA/8TW2v/b8/r/1uzy/9fu9P/X7vT/1uzy/9r0+//H
+zMv/nVAA/6JnOP+cUgD/4dnU//z////3+vv/+Pz9//j8/f/4/P3/9/v7//r////s39b/0I1G/Nye
+Z//SlV/X1apVBgAAAAAAAAAAuOPxEq/d6ea04/D/r93p/a/d6f+v3en/r93p/6/d6f+v3en/r93p
+/6/d6f+v3en/r93p/6/d6f+v3en/r9zo/7Df6/+t2eT/Yl5Z/00jAP8/AAD/gYF+/9jv9f/X7vT/
+1+70/9fu9P/X7vT/1+3z/9nx9/+zm4z/nlMA/51ZA/+yiG7/9vn5//n9/v/4+/z/+Pz9//j8/f/4
+/P3/+Pv8//n////fvKP/0IxE++Kja//Sll+DAAAAAL+AQAQAAAAAsN7qPbPi7v+v3en/r93p/6/d
+6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/rtzn/7Pj7/+XucH/RQAA
+/1Q8Lf84AAD/sL7A/931+//W7PL/1+70/9fu9P/W7fP/2fL5/8/d3/+iZS//omUz/5hFAP/Tw7r/
+/f////f6+//4/P3/+Pz9//j8/f/4+/z/+f////Ty7//Vm2j+1JVa/9SYYf7UmGIvAAAAAP+qVQMA
+AAAArt3pcrvs+f+v3en7r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d
+6f+v3en/r93p/7Hg7P92g4X/RgAA/0spAv9fT0P/z+Tp/9nx9//W7fP/1+70/9fu9P/W7fL/2vT7
+/721rv+dTwD/oWMu/6NnM//t7Or/+/////f7/P/4/P3/+Pz9//j8/f/3+/v/+v///+nXyv/Qi0L7
+36Bp/9OWX8MAAAAAAAAAAP8AAAEAAAAAr93pprvs+f+v3en7r93p/6/d6f+v3en/r93p/6/d6f+v
+3en/r93p/6/d6f+v3en/r93p/6/d6f+u3Oj/suHu/6PL1f9RMxn/Uzgl/zYAAP+Umpr/3PT6/9bt
+8//X7vT/1+70/9ft8//Y8Pb/1eru/6l9YP+hXhn/mk8A/8Gllf/7////+Pv8//j8/f/4/P3/+Pz9
+//j8/f/4/P3/+Pz9/9yyk//Rjkv74qJq/9OXX2kAAAAAzJlmBQAAAAAAAAAArt3p0bfn9P+v3en8
+r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+v3en/r93p/6/d6f+u2+f/tOTw/4ihpv9B
+AAD/VD4v/0IAAP+9ztH/3PT7/9bs8v/X7vT/1+70/9bs8v/a9Pv/x83L/51RAP+jaDr/nFEA/+DY
+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
+
+------=_Part_3507F544_E13E9FCC.14DC3DDDDAC--

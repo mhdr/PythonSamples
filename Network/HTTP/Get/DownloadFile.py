@@ -2,28 +2,38 @@ import socket
 
 CRLF = "\r\n"
 
+address="127.0.0.1"
+port=80
+file="Keygen.jar"
+
+encoding="latin-1"
+
+get_line="GET /{0} HTTP/1.1".format(file)
+host_line="Host: {0}".format(address)
+
 request = [
-    "GET /Keygen.exe HTTP/1.1",
-    "Host: 192.168.150.129",
+    get_line,
+    host_line,
     "Connection: Keep-Alive",
-    "Accept-Encoding: gzip, deflate",
     "",
     "",
 ]
 
 # Connect to the server
 s = socket.socket()
-s.connect(('192.168.150.129', 80))
+s.connect((address,port))
+
+requestStr=CRLF.join(request)
 
 # Send an HTTP request
-s.send(CRLF.join(request))
+s.send(requestStr.encode(encoding))
 
 # Get the response (in several parts, if necessary)
 response = ''
 progress=0
 buffer = s.recv(4096)
 while buffer:
-    response += buffer
+    response += bytes.decode(buffer,encoding)
     progress +=len(buffer)
     print(progress)
     buffer = s.recv(4096)
@@ -31,7 +41,7 @@ while buffer:
 # HTTP headers will be separated from the body by an empty line
 header_data, _, body = response.partition(CRLF + CRLF)
 
-file=open("Keygen.exe","wb")
-file.write(body)
+file=open(file,"wb")
+file.write(body.encode(encoding))
 file.flush()
 file.close()
