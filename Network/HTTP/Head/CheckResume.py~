@@ -6,7 +6,7 @@ request = [
     "HEAD /hello.txt HTTP/1.1",
     "Host: localhost",
     "Connection: Close",
-    "Range: bytes=0-1",
+    "Range: bytes=0-5",
     "",
     "",
 ]
